@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+Pods/
+.gradle/
+.idea/
+build/
+xcuserdata/

@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		260A68FA2982F3AD009EA17C /* ReactNativeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260A68F92982F3AD009EA17C /* ReactNativeVC.swift */; };
+		260A68FD2982F725009EA17C /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260A68FB2982F5CD009EA17C /* JavaScriptCore.framework */; };
+		260A68FE2982F725009EA17C /* JavaScriptCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260A68FB2982F5CD009EA17C /* JavaScriptCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		260A68FF2982F729009EA17C /* Pods_TestTabApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6B1343DF9C1E7310614385 /* Pods_TestTabApp.framework */; };
+		260A69002982F729009EA17C /* Pods_TestTabApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6B1343DF9C1E7310614385 /* Pods_TestTabApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		26CAD663298051200084BF54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD662298051200084BF54 /* AppDelegate.swift */; };
+		26CAD665298051200084BF54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD664298051200084BF54 /* SceneDelegate.swift */; };
+		26CAD667298051200084BF54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD666298051200084BF54 /* ViewController.swift */; };
+		26CAD66A298051200084BF54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26CAD668298051200084BF54 /* Main.storyboard */; };
+		26CAD66C298051220084BF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CAD66B298051220084BF54 /* Assets.xcassets */; };
+		26CAD66F298051220084BF54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26CAD66D298051220084BF54 /* LaunchScreen.storyboard */; };
+		26CAD684298051220084BF54 /* TestTabAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD683298051220084BF54 /* TestTabAppUITests.swift */; };
+		26CAD686298051220084BF54 /* TestTabAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD685298051220084BF54 /* TestTabAppUITestsLaunchTests.swift */; };
+		26CAD693298051700084BF54 /* TabOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD692298051700084BF54 /* TabOne.swift */; };
+		26CAD695298051790084BF54 /* TabTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD694298051790084BF54 /* TabTwo.swift */; };
+		26CAD69B2981B1400084BF54 /* TestTabAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD679298051220084BF54 /* TestTabAppTests.swift */; };
+		4678D0ED6926D3538F1009F2 /* Pods_TestTabApp_TestTabAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5842801C9B94DF0E0DFC3707 /* Pods_TestTabApp_TestTabAppUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26CAD680298051220084BF54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26CAD657298051200084BF54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26CAD65E298051200084BF54;
+			remoteInfo = TestTabApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		26CAD6A82981B3530084BF54 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				260A69002982F729009EA17C /* Pods_TestTabApp.framework in Embed Frameworks */,
+				260A68FE2982F725009EA17C /* JavaScriptCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08AA57A65A7B96AF8F836BC9 /* Pods-TestTabApp-TestTabAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp-TestTabAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1DB4BE716F33E12B52CF1D1C /* Pods-TestTabApp-TestTabAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp-TestTabAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		260A68F92982F3AD009EA17C /* ReactNativeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeVC.swift; sourceTree = "<group>"; };
+		260A68FB2982F5CD009EA17C /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		26CAD65F298051200084BF54 /* TestTabApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTabApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26CAD662298051200084BF54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		26CAD664298051200084BF54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		26CAD666298051200084BF54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		26CAD669298051200084BF54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26CAD66B298051220084BF54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26CAD66E298051220084BF54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		26CAD670298051220084BF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26CAD679298051220084BF54 /* TestTabAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabAppTests.swift; sourceTree = "<group>"; };
+		26CAD67F298051220084BF54 /* TestTabAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTabAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26CAD683298051220084BF54 /* TestTabAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabAppUITests.swift; sourceTree = "<group>"; };
+		26CAD685298051220084BF54 /* TestTabAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		26CAD692298051700084BF54 /* TabOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOne.swift; sourceTree = "<group>"; };
+		26CAD694298051790084BF54 /* TabTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTwo.swift; sourceTree = "<group>"; };
+		5842801C9B94DF0E0DFC3707 /* Pods_TestTabApp_TestTabAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTabApp_TestTabAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A97698F07F05036C8CE0984 /* Pods-TestTabApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp.release.xcconfig"; path = "Target Support Files/Pods-TestTabApp/Pods-TestTabApp.release.xcconfig"; sourceTree = "<group>"; };
+		A195EE4B8657E8E380E2935B /* Pods-TestTabApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp.debug.xcconfig"; path = "Target Support Files/Pods-TestTabApp/Pods-TestTabApp.debug.xcconfig"; sourceTree = "<group>"; };
+		DA6B1343DF9C1E7310614385 /* Pods_TestTabApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTabApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26CAD65C298051200084BF54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260A68FF2982F729009EA17C /* Pods_TestTabApp.framework in Frameworks */,
+				260A68FD2982F725009EA17C /* JavaScriptCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26CAD67C298051220084BF54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4678D0ED6926D3538F1009F2 /* Pods_TestTabApp_TestTabAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26CAD656298051200084BF54 = {
+			isa = PBXGroup;
+			children = (
+				26CAD661298051200084BF54 /* TestTabApp */,
+				26CAD678298051220084BF54 /* TestTabAppTests */,
+				26CAD682298051220084BF54 /* TestTabAppUITests */,
+				26CAD660298051200084BF54 /* Products */,
+				26CAD6962981B0960084BF54 /* Frameworks */,
+				786232C66618FACCEBA216E3 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		26CAD660298051200084BF54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26CAD65F298051200084BF54 /* TestTabApp.app */,
+				26CAD67F298051220084BF54 /* TestTabAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26CAD661298051200084BF54 /* TestTabApp */ = {
+			isa = PBXGroup;
+			children = (
+				26CAD662298051200084BF54 /* AppDelegate.swift */,
+				26CAD664298051200084BF54 /* SceneDelegate.swift */,
+				26CAD666298051200084BF54 /* ViewController.swift */,
+				26CAD668298051200084BF54 /* Main.storyboard */,
+				26CAD66B298051220084BF54 /* Assets.xcassets */,
+				26CAD66D298051220084BF54 /* LaunchScreen.storyboard */,
+				26CAD670298051220084BF54 /* Info.plist */,
+				26CAD692298051700084BF54 /* TabOne.swift */,
+				26CAD694298051790084BF54 /* TabTwo.swift */,
+				260A68F92982F3AD009EA17C /* ReactNativeVC.swift */,
+			);
+			path = TestTabApp;
+			sourceTree = "<group>";
+		};
+		26CAD678298051220084BF54 /* TestTabAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				26CAD679298051220084BF54 /* TestTabAppTests.swift */,
+			);
+			path = TestTabAppTests;
+			sourceTree = "<group>";
+		};
+		26CAD682298051220084BF54 /* TestTabAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				26CAD683298051220084BF54 /* TestTabAppUITests.swift */,
+				26CAD685298051220084BF54 /* TestTabAppUITestsLaunchTests.swift */,
+			);
+			path = TestTabAppUITests;
+			sourceTree = "<group>";
+		};
+		26CAD6962981B0960084BF54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				260A68FB2982F5CD009EA17C /* JavaScriptCore.framework */,
+				DA6B1343DF9C1E7310614385 /* Pods_TestTabApp.framework */,
+				5842801C9B94DF0E0DFC3707 /* Pods_TestTabApp_TestTabAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		786232C66618FACCEBA216E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A195EE4B8657E8E380E2935B /* Pods-TestTabApp.debug.xcconfig */,
+				8A97698F07F05036C8CE0984 /* Pods-TestTabApp.release.xcconfig */,
+				1DB4BE716F33E12B52CF1D1C /* Pods-TestTabApp-TestTabAppUITests.debug.xcconfig */,
+				08AA57A65A7B96AF8F836BC9 /* Pods-TestTabApp-TestTabAppUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26CAD65E298051200084BF54 /* TestTabApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26CAD689298051220084BF54 /* Build configuration list for PBXNativeTarget "TestTabApp" */;
+			buildPhases = (
+				6E2E0069D5322D232AE0513D /* [CP] Check Pods Manifest.lock */,
+				26CAD65B298051200084BF54 /* Sources */,
+				26CAD65C298051200084BF54 /* Frameworks */,
+				26CAD65D298051200084BF54 /* Resources */,
+				26CAD6A82981B3530084BF54 /* Embed Frameworks */,
+				0C2E2B6D303B4A17ECDE0762 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestTabApp;
+			productName = TestTabApp;
+			productReference = 26CAD65F298051200084BF54 /* TestTabApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		26CAD67E298051220084BF54 /* TestTabAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26CAD68F298051220084BF54 /* Build configuration list for PBXNativeTarget "TestTabAppUITests" */;
+			buildPhases = (
+				1553385484F39C0CB52660A3 /* [CP] Check Pods Manifest.lock */,
+				26CAD67B298051220084BF54 /* Sources */,
+				26CAD67C298051220084BF54 /* Frameworks */,
+				26CAD67D298051220084BF54 /* Resources */,
+				A822F5CAEC90EDBFB9741DB9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26CAD681298051220084BF54 /* PBXTargetDependency */,
+			);
+			name = TestTabAppUITests;
+			productName = TestTabAppUITests;
+			productReference = 26CAD67F298051220084BF54 /* TestTabAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26CAD657298051200084BF54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					26CAD65E298051200084BF54 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					26CAD67E298051220084BF54 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 26CAD65E298051200084BF54;
+					};
+				};
+			};
+			buildConfigurationList = 26CAD65A298051200084BF54 /* Build configuration list for PBXProject "TestTabApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26CAD656298051200084BF54;
+			productRefGroup = 26CAD660298051200084BF54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26CAD65E298051200084BF54 /* TestTabApp */,
+				26CAD67E298051220084BF54 /* TestTabAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26CAD65D298051200084BF54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26CAD66F298051220084BF54 /* LaunchScreen.storyboard in Resources */,
+				26CAD66C298051220084BF54 /* Assets.xcassets in Resources */,
+				26CAD66A298051200084BF54 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26CAD67D298051220084BF54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C2E2B6D303B4A17ECDE0762 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp/Pods-TestTabApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp/Pods-TestTabApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestTabApp/Pods-TestTabApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1553385484F39C0CB52660A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestTabApp-TestTabAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E2E0069D5322D232AE0513D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestTabApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A822F5CAEC90EDBFB9741DB9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26CAD65B298051200084BF54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26CAD695298051790084BF54 /* TabTwo.swift in Sources */,
+				26CAD693298051700084BF54 /* TabOne.swift in Sources */,
+				26CAD667298051200084BF54 /* ViewController.swift in Sources */,
+				26CAD69B2981B1400084BF54 /* TestTabAppTests.swift in Sources */,
+				260A68FA2982F3AD009EA17C /* ReactNativeVC.swift in Sources */,
+				26CAD663298051200084BF54 /* AppDelegate.swift in Sources */,
+				26CAD665298051200084BF54 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26CAD67B298051220084BF54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26CAD686298051220084BF54 /* TestTabAppUITestsLaunchTests.swift in Sources */,
+				26CAD684298051220084BF54 /* TestTabAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26CAD681298051220084BF54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26CAD65E298051200084BF54 /* TestTabApp */;
+			targetProxy = 26CAD680298051220084BF54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		26CAD668298051200084BF54 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26CAD669298051200084BF54 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		26CAD66D298051220084BF54 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26CAD66E298051220084BF54 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26CAD687298051220084BF54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		26CAD688298051220084BF54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26CAD68A298051220084BF54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A195EE4B8657E8E380E2935B /* Pods-TestTabApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 762H5V79XV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestTabApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brandingbrand.org.TestTabApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26CAD68B298051220084BF54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A97698F07F05036C8CE0984 /* Pods-TestTabApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 762H5V79XV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestTabApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brandingbrand.org.TestTabApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		26CAD690298051220084BF54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DB4BE716F33E12B52CF1D1C /* Pods-TestTabApp-TestTabAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 762H5V79XV;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brandingbrand.org.TestTabAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestTabApp;
+			};
+			name = Debug;
+		};
+		26CAD691298051220084BF54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08AA57A65A7B96AF8F836BC9 /* Pods-TestTabApp-TestTabAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 762H5V79XV;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brandingbrand.org.TestTabAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestTabApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26CAD65A298051200084BF54 /* Build configuration list for PBXProject "TestTabApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26CAD687298051220084BF54 /* Debug */,
+				26CAD688298051220084BF54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26CAD689298051220084BF54 /* Build configuration list for PBXNativeTarget "TestTabApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26CAD68A298051220084BF54 /* Debug */,
+				26CAD68B298051220084BF54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26CAD68F298051220084BF54 /* Build configuration list for PBXNativeTarget "TestTabAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26CAD690298051220084BF54 /* Debug */,
+				26CAD691298051220084BF54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26CAD657298051200084BF54 /* Project object */;
+}

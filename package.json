@@ -1,0 +1,13 @@
+{
+  "name": "HybridNativeApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "yarn react-native start"
+  },
+  "dependencies": {
+    "@babel/core": "^7.20.12",
+    "react": "^17.0.0",
+    "react-native": "^0.68.5"
+  }
+}
