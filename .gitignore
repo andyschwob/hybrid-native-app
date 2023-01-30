@@ -5,3 +5,4 @@ Pods/
 .idea/
 build/
 xcuserdata/
+.xcworkspace
