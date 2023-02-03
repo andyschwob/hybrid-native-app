@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		079C27F219C12FB631EEC8AF /* libPods-TestTabApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB59BCD5C8A003DF63869F51 /* libPods-TestTabApp.a */; };
 		260A68FA2982F3AD009EA17C /* ReactNativeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260A68F92982F3AD009EA17C /* ReactNativeVC.swift */; };
 		260A68FD2982F725009EA17C /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260A68FB2982F5CD009EA17C /* JavaScriptCore.framework */; };
 		260A68FE2982F725009EA17C /* JavaScriptCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260A68FB2982F5CD009EA17C /* JavaScriptCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		260A68FF2982F729009EA17C /* Pods_TestTabApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6B1343DF9C1E7310614385 /* Pods_TestTabApp.framework */; };
 		260A69002982F729009EA17C /* Pods_TestTabApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6B1343DF9C1E7310614385 /* Pods_TestTabApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		260A690C2989BD76009EA17C /* ReactGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A690B2989BD76009EA17C /* ReactGateway.m */; };
+		260A6915298AD8AF009EA17C /* BridgeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A6914298AD8AF009EA17C /* BridgeModule.m */; };
+		260A6918298ADDF0009EA17C /* BridgeModuleEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A6917298ADDF0009EA17C /* BridgeModuleEvent.m */; };
 		26CAD663298051200084BF54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD662298051200084BF54 /* AppDelegate.swift */; };
 		26CAD665298051200084BF54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD664298051200084BF54 /* SceneDelegate.swift */; };
 		26CAD667298051200084BF54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD666298051200084BF54 /* ViewController.swift */; };
@@ -23,7 +26,7 @@
 		26CAD693298051700084BF54 /* TabOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD692298051700084BF54 /* TabOne.swift */; };
 		26CAD695298051790084BF54 /* TabTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD694298051790084BF54 /* TabTwo.swift */; };
 		26CAD69B2981B1400084BF54 /* TestTabAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD679298051220084BF54 /* TestTabAppTests.swift */; };
-		4678D0ED6926D3538F1009F2 /* Pods_TestTabApp_TestTabAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5842801C9B94DF0E0DFC3707 /* Pods_TestTabApp_TestTabAppUITests.framework */; };
+		9321D19E6F908AE513E60522 /* libPods-TestTabApp-TestTabAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E23843CF861EB6477E70B64 /* libPods-TestTabApp-TestTabAppUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,14 @@
 		1DB4BE716F33E12B52CF1D1C /* Pods-TestTabApp-TestTabAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp-TestTabAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		260A68F92982F3AD009EA17C /* ReactNativeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeVC.swift; sourceTree = "<group>"; };
 		260A68FB2982F5CD009EA17C /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		260A69032989BC17009EA17C /* TestTabApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestTabApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		260A690A2989BD76009EA17C /* ReactGateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactGateway.h; sourceTree = "<group>"; };
+		260A690B2989BD76009EA17C /* ReactGateway.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactGateway.m; sourceTree = "<group>"; };
+		260A6913298AD8AF009EA17C /* BridgeModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeModule.h; sourceTree = "<group>"; };
+		260A6914298AD8AF009EA17C /* BridgeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModule.m; sourceTree = "<group>"; };
+		260A6916298ADDF0009EA17C /* BridgeModuleEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeModuleEvent.h; sourceTree = "<group>"; };
+		260A6917298ADDF0009EA17C /* BridgeModuleEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModuleEvent.m; sourceTree = "<group>"; };
+		2651D8A0298C41EE00CBE07B /* BridgeModuleConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeModuleConstants.h; sourceTree = "<group>"; };
 		26CAD65F298051200084BF54 /* TestTabApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTabApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CAD662298051200084BF54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26CAD664298051200084BF54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,9 +81,10 @@
 		26CAD685298051220084BF54 /* TestTabAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		26CAD692298051700084BF54 /* TabOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOne.swift; sourceTree = "<group>"; };
 		26CAD694298051790084BF54 /* TabTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTwo.swift; sourceTree = "<group>"; };
-		5842801C9B94DF0E0DFC3707 /* Pods_TestTabApp_TestTabAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTabApp_TestTabAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E23843CF861EB6477E70B64 /* libPods-TestTabApp-TestTabAppUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTabApp-TestTabAppUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A97698F07F05036C8CE0984 /* Pods-TestTabApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp.release.xcconfig"; path = "Target Support Files/Pods-TestTabApp/Pods-TestTabApp.release.xcconfig"; sourceTree = "<group>"; };
 		A195EE4B8657E8E380E2935B /* Pods-TestTabApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp.debug.xcconfig"; path = "Target Support Files/Pods-TestTabApp/Pods-TestTabApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CB59BCD5C8A003DF63869F51 /* libPods-TestTabApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTabApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6B1343DF9C1E7310614385 /* Pods_TestTabApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTabApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,8 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				260A68FF2982F729009EA17C /* Pods_TestTabApp.framework in Frameworks */,
 				260A68FD2982F725009EA17C /* JavaScriptCore.framework in Frameworks */,
+				079C27F219C12FB631EEC8AF /* libPods-TestTabApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,13 +102,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4678D0ED6926D3538F1009F2 /* Pods_TestTabApp_TestTabAppUITests.framework in Frameworks */,
+				9321D19E6F908AE513E60522 /* libPods-TestTabApp-TestTabAppUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		260A69022989BA17009EA17C /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				DA6B1343DF9C1E7310614385 /* Pods_TestTabApp.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		26CAD656298051200084BF54 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +126,8 @@
 				26CAD660298051200084BF54 /* Products */,
 				26CAD6962981B0960084BF54 /* Frameworks */,
 				786232C66618FACCEBA216E3 /* Pods */,
+				260A69022989BA17009EA17C /* Recovered References */,
+				260A69032989BC17009EA17C /* TestTabApp-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +153,13 @@
 				26CAD692298051700084BF54 /* TabOne.swift */,
 				26CAD694298051790084BF54 /* TabTwo.swift */,
 				260A68F92982F3AD009EA17C /* ReactNativeVC.swift */,
+				260A690A2989BD76009EA17C /* ReactGateway.h */,
+				260A690B2989BD76009EA17C /* ReactGateway.m */,
+				260A6913298AD8AF009EA17C /* BridgeModule.h */,
+				260A6914298AD8AF009EA17C /* BridgeModule.m */,
+				260A6916298ADDF0009EA17C /* BridgeModuleEvent.h */,
+				260A6917298ADDF0009EA17C /* BridgeModuleEvent.m */,
+				2651D8A0298C41EE00CBE07B /* BridgeModuleConstants.h */,
 			);
 			path = TestTabApp;
 			sourceTree = "<group>";
@@ -156,8 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				260A68FB2982F5CD009EA17C /* JavaScriptCore.framework */,
-				DA6B1343DF9C1E7310614385 /* Pods_TestTabApp.framework */,
-				5842801C9B94DF0E0DFC3707 /* Pods_TestTabApp_TestTabAppUITests.framework */,
+				CB59BCD5C8A003DF63869F51 /* libPods-TestTabApp.a */,
+				5E23843CF861EB6477E70B64 /* libPods-TestTabApp-TestTabAppUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,6 +215,7 @@
 				26CAD65D298051200084BF54 /* Resources */,
 				26CAD6A82981B3530084BF54 /* Embed Frameworks */,
 				0C2E2B6D303B4A17ECDE0762 /* [CP] Embed Pods Frameworks */,
+				80B4B502A8822E2F80CA1627 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,6 +235,7 @@
 				26CAD67C298051220084BF54 /* Frameworks */,
 				26CAD67D298051220084BF54 /* Resources */,
 				A822F5CAEC90EDBFB9741DB9 /* [CP] Embed Pods Frameworks */,
+				DD9A46C038F33B2DEEB630EF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,6 +259,7 @@
 				TargetAttributes = {
 					26CAD65E298051200084BF54 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					26CAD67E298051220084BF54 = {
 						CreatedOnToolsVersion = 13.1;
@@ -336,6 +368,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		80B4B502A8822E2F80CA1627 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp/Pods-TestTabApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp/Pods-TestTabApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestTabApp/Pods-TestTabApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A822F5CAEC90EDBFB9741DB9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,6 +402,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DD9A46C038F33B2DEEB630EF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -361,12 +427,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				26CAD695298051790084BF54 /* TabTwo.swift in Sources */,
+				260A690C2989BD76009EA17C /* ReactGateway.m in Sources */,
 				26CAD693298051700084BF54 /* TabOne.swift in Sources */,
 				26CAD667298051200084BF54 /* ViewController.swift in Sources */,
 				26CAD69B2981B1400084BF54 /* TestTabAppTests.swift in Sources */,
 				260A68FA2982F3AD009EA17C /* ReactNativeVC.swift in Sources */,
+				260A6915298AD8AF009EA17C /* BridgeModule.m in Sources */,
 				26CAD663298051200084BF54 /* AppDelegate.swift in Sources */,
 				26CAD665298051200084BF54 /* SceneDelegate.swift in Sources */,
+				260A6918298ADDF0009EA17C /* BridgeModuleEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +484,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -446,6 +515,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -464,6 +534,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -476,7 +547,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -507,6 +578,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -518,6 +590,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -531,6 +604,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -550,6 +624,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brandingbrand.org.TestTabApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TestTabApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -561,6 +637,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -580,6 +657,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brandingbrand.org.TestTabApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TestTabApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

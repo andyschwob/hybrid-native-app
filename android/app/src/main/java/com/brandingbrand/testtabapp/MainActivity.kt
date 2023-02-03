@@ -1,15 +1,21 @@
 package com.brandingbrand.testtabapp
 
+import android.R
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager.widget.ViewPager
+import com.brandingbrand.testtabapp.databinding.ActivityMainBinding
+import com.brandingbrand.testtabapp.ui.main.ReactNativeFragment
+import com.brandingbrand.testtabapp.ui.main.SectionsPagerAdapter
+import com.facebook.react.PackageList
+import com.facebook.react.ReactInstanceManager
+import com.facebook.react.ReactPackage
+import com.facebook.react.ReactRootView
+import com.facebook.react.common.LifecycleState
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
-import androidx.viewpager.widget.ViewPager
-import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
-import com.brandingbrand.testtabapp.ui.main.SectionsPagerAdapter
-import com.brandingbrand.testtabapp.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,4 +39,5 @@ class MainActivity : AppCompatActivity() {
                     .setAction("Action", null).show()
         }
     }
+
 }

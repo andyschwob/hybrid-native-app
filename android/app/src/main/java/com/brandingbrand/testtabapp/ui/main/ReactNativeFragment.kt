@@ -1,16 +1,22 @@
 package com.brandingbrand.testtabapp.ui.main
 
+import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.brandingbrand.testtabapp.BuildConfig
+import com.brandingbrand.testtabapp.MainActivity
+import com.brandingbrand.testtabapp.MainApplication
 import com.brandingbrand.testtabapp.R
+import com.facebook.react.PackageList
+import com.facebook.react.ReactInstanceManager
+import com.facebook.react.ReactPackage
+import com.facebook.react.ReactRootView
+import com.facebook.react.common.LifecycleState
+import com.facebook.soloader.SoLoader
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -18,36 +24,46 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class ReactNativeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var mReactRootView: ReactRootView? = null
+    private var mReactInstanceManager: ReactInstanceManager? = null
+    fun getMainComponentName(): String {
+        return "HybridNativeApp"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+        SoLoader.init(activity?.baseContext, false)
+        mReactRootView = ReactRootView(activity?.baseContext)
+        val packages: List<ReactPackage> = PackageList(activity?.application).packages
+        // Packages that cannot be autolinked yet can be added manually here, for example:
+        // packages.add(MyReactNativePackage())
+        // Remember to include them in `settings.gradle` and `app/build.gradle` too.
+        mReactInstanceManager = ReactInstanceManager.builder()
+            .setApplication(activity?.application)
+            .setCurrentActivity(activity)
+            .setBundleAssetName("index.android.bundle")
+            .setJSMainModulePath("index")
+            .addPackages(packages)
+            .setUseDeveloperSupport(BuildConfig.DEBUG)
+            .setInitialLifecycleState(LifecycleState.RESUMED)
+            .build()
+        // The string here (e.g. "MyReactNativeApp") has to match
+        // the string in AppRegistry.registerComponent() in index.js
+        mReactRootView?.startReactApplication(mReactInstanceManager, getMainComponentName(), null)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_react_native, container, false)
+        return mReactRootView
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ReactNativeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() = ReactNativeFragment()
     }

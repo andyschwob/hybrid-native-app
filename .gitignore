@@ -5,4 +5,7 @@ Pods/
 .idea/
 build/
 xcuserdata/
-.xcworkspace
+*.xcworkspace
+.xcode.env
+yarn.lock
+
