@@ -4,4 +4,4 @@
 
 #import "ReactGateway.h"
 #import "BridgeModuleEvent.h"
-
+#import "BridgeModuleConstants.h"

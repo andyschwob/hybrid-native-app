@@ -2,12 +2,15 @@
 //  BridgeModuleConstants.h
 //  TestTabApp
 //
-//  Created by Branding Brand on 2/2/23.
+//  Created by Branding Brand on 2/3/23.
 //
 
-#ifndef BridgeModuleConstants_h
-#define BridgeModuleConstants_h
+#import <Foundation/Foundation.h>
 
-#define ReactBridgeEvent @"com.brandingbrand.sdk:message"
+NS_ASSUME_NONNULL_BEGIN
 
-#endif /* BridgeModuleConstants_h */
+@interface BridgeModuleConstants : NSObject
+extern NSNotificationName const ReactBridgeEventIdentifier;
+@end
+
+NS_ASSUME_NONNULL_END

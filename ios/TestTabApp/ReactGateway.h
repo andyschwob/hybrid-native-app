@@ -19,8 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ReactGateway : UIViewController
 
-@property (nonatomic, weak) id <ReactGatewayDelegate> delegate;
-
 - (instancetype)initWithJsBundle:(NSURL*)bundle
                       moduleName:(NSString *)name
                     initialProps:(nullable NSDictionary *)props;

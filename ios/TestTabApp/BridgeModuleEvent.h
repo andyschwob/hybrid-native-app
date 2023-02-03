@@ -19,7 +19,7 @@ typedef NS_ENUM(NSUInteger, Type)
 @interface BridgeModuleEvent : NSObject
 
 @property(nonatomic, readonly, assign) Type eventType;
-@property(nonatomic, strong) NSString *invokingApplication;
+@property(nonatomic, strong) NSString *invokingComponent;
 @property(nonatomic, strong) NSDictionary *data;
 
 - (instancetype)initWithData:(NSDictionary *)data;

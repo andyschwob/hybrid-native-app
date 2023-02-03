@@ -22,7 +22,7 @@
         else if ([event isEqual: @"LINK"]) {
             _eventType = 2;
         }
-        _invokingApplication = [data valueForKey:@"application"];
+        _invokingComponent = [data valueForKey:@"component"];
         _data = [data valueForKey:@"data"];
     }
     return self;

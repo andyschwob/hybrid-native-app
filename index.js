@@ -10,7 +10,7 @@ const EventType = {
 }
 const ReactNativeTest = () => {
   BridgeModule.dispatchApplicationEvent({
-    application: "HybridNativeApp",
+    component: "ComponentOne",
     event: EventType.exit,
     data: {
       data : "ADDITIONAL DATA",
@@ -34,4 +34,4 @@ var styles = StyleSheet.create({
     margin: 10,
   },
 });
-AppRegistry.registerComponent("HybridNativeApp", () => ReactNativeTest);
+AppRegistry.registerComponent("ComponentOne", () => ReactNativeTest);

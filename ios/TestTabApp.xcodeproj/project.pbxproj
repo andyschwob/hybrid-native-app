@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		079C27F219C12FB631EEC8AF /* libPods-TestTabApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB59BCD5C8A003DF63869F51 /* libPods-TestTabApp.a */; };
-		260A68FA2982F3AD009EA17C /* ReactNativeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260A68F92982F3AD009EA17C /* ReactNativeVC.swift */; };
 		260A68FD2982F725009EA17C /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260A68FB2982F5CD009EA17C /* JavaScriptCore.framework */; };
 		260A68FE2982F725009EA17C /* JavaScriptCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260A68FB2982F5CD009EA17C /* JavaScriptCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		260A69002982F729009EA17C /* Pods_TestTabApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6B1343DF9C1E7310614385 /* Pods_TestTabApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		260A690C2989BD76009EA17C /* ReactGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A690B2989BD76009EA17C /* ReactGateway.m */; };
 		260A6915298AD8AF009EA17C /* BridgeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A6914298AD8AF009EA17C /* BridgeModule.m */; };
 		260A6918298ADDF0009EA17C /* BridgeModuleEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A6917298ADDF0009EA17C /* BridgeModuleEvent.m */; };
+		26A0BA4A298DA585001C58AF /* ReactGatewayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0BA49298DA585001C58AF /* ReactGatewayManager.swift */; };
+		26A0BA51298DB3E4001C58AF /* BridgeModuleConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A0BA50298DB3E4001C58AF /* BridgeModuleConstants.m */; };
 		26CAD663298051200084BF54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD662298051200084BF54 /* AppDelegate.swift */; };
 		26CAD665298051200084BF54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD664298051200084BF54 /* SceneDelegate.swift */; };
 		26CAD667298051200084BF54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD666298051200084BF54 /* ViewController.swift */; };
@@ -57,7 +58,6 @@
 /* Begin PBXFileReference section */
 		08AA57A65A7B96AF8F836BC9 /* Pods-TestTabApp-TestTabAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp-TestTabAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1DB4BE716F33E12B52CF1D1C /* Pods-TestTabApp-TestTabAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp-TestTabAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		260A68F92982F3AD009EA17C /* ReactNativeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeVC.swift; sourceTree = "<group>"; };
 		260A68FB2982F5CD009EA17C /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		260A69032989BC17009EA17C /* TestTabApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestTabApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		260A690A2989BD76009EA17C /* ReactGateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactGateway.h; sourceTree = "<group>"; };
@@ -66,7 +66,9 @@
 		260A6914298AD8AF009EA17C /* BridgeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModule.m; sourceTree = "<group>"; };
 		260A6916298ADDF0009EA17C /* BridgeModuleEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeModuleEvent.h; sourceTree = "<group>"; };
 		260A6917298ADDF0009EA17C /* BridgeModuleEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModuleEvent.m; sourceTree = "<group>"; };
-		2651D8A0298C41EE00CBE07B /* BridgeModuleConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeModuleConstants.h; sourceTree = "<group>"; };
+		26A0BA49298DA585001C58AF /* ReactGatewayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactGatewayManager.swift; sourceTree = "<group>"; };
+		26A0BA4F298DB3E4001C58AF /* BridgeModuleConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeModuleConstants.h; sourceTree = "<group>"; };
+		26A0BA50298DB3E4001C58AF /* BridgeModuleConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModuleConstants.m; sourceTree = "<group>"; };
 		26CAD65F298051200084BF54 /* TestTabApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTabApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CAD662298051200084BF54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26CAD664298051200084BF54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,14 +154,15 @@
 				26CAD670298051220084BF54 /* Info.plist */,
 				26CAD692298051700084BF54 /* TabOne.swift */,
 				26CAD694298051790084BF54 /* TabTwo.swift */,
-				260A68F92982F3AD009EA17C /* ReactNativeVC.swift */,
 				260A690A2989BD76009EA17C /* ReactGateway.h */,
 				260A690B2989BD76009EA17C /* ReactGateway.m */,
 				260A6913298AD8AF009EA17C /* BridgeModule.h */,
 				260A6914298AD8AF009EA17C /* BridgeModule.m */,
 				260A6916298ADDF0009EA17C /* BridgeModuleEvent.h */,
 				260A6917298ADDF0009EA17C /* BridgeModuleEvent.m */,
-				2651D8A0298C41EE00CBE07B /* BridgeModuleConstants.h */,
+				26A0BA49298DA585001C58AF /* ReactGatewayManager.swift */,
+				26A0BA4F298DB3E4001C58AF /* BridgeModuleConstants.h */,
+				26A0BA50298DB3E4001C58AF /* BridgeModuleConstants.m */,
 			);
 			path = TestTabApp;
 			sourceTree = "<group>";
@@ -431,9 +434,10 @@
 				26CAD693298051700084BF54 /* TabOne.swift in Sources */,
 				26CAD667298051200084BF54 /* ViewController.swift in Sources */,
 				26CAD69B2981B1400084BF54 /* TestTabAppTests.swift in Sources */,
-				260A68FA2982F3AD009EA17C /* ReactNativeVC.swift in Sources */,
 				260A6915298AD8AF009EA17C /* BridgeModule.m in Sources */,
+				26A0BA51298DB3E4001C58AF /* BridgeModuleConstants.m in Sources */,
 				26CAD663298051200084BF54 /* AppDelegate.swift in Sources */,
+				26A0BA4A298DA585001C58AF /* ReactGatewayManager.swift in Sources */,
 				26CAD665298051200084BF54 /* SceneDelegate.swift in Sources */,
 				260A6918298ADDF0009EA17C /* BridgeModuleEvent.m in Sources */,
 			);

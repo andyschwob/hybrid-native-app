@@ -24,7 +24,9 @@ RCT_EXPORT_METHOD(dispatchApplicationEvent:(NSDictionary *)data)
 
 - (void)dispatchResult:(NSDictionary *)data
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:ReactBridgeEvent object:nil userInfo:data];
+    [[NSNotificationCenter defaultCenter] postNotificationName:ReactBridgeEventIdentifier
+                                                        object:nil
+                                                      userInfo:data];
 }
 
 @end
