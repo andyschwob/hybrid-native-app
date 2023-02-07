@@ -28,6 +28,7 @@ class ReactGatewayProvider {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
+    
     //MARK: React Native host View Controller
     func newReactGatway(jsBundle: URL,
                         moduleName: String,

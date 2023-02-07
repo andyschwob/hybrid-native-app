@@ -2,14 +2,12 @@ package com.brandingbrand.testtabapp.ui.main
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.brandingbrand.testtabapp.BuildConfig
-import com.brandingbrand.testtabapp.MainActivity
-import com.brandingbrand.testtabapp.MainApplication
-import com.brandingbrand.testtabapp.R
+import com.brandingbrand.testtabapp.*
 import com.facebook.react.PackageList
 import com.facebook.react.ReactInstanceManager
 import com.facebook.react.ReactPackage
@@ -26,8 +24,8 @@ import com.facebook.soloader.SoLoader
 class ReactNativeFragment : Fragment() {
     private var mReactRootView: ReactRootView? = null
     private var mReactInstanceManager: ReactInstanceManager? = null
-    fun getMainComponentName(): String {
-        return "HybridNativeApp"
+    private fun getMainComponentName(): String {
+        return "ComponentOne"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +33,7 @@ class ReactNativeFragment : Fragment() {
         SoLoader.init(activity?.baseContext, false)
         mReactRootView = ReactRootView(activity?.baseContext)
         val packages: List<ReactPackage> = PackageList(activity?.application).packages
+        Log.d("PACKAGES!", packages.toString())
         // Packages that cannot be autolinked yet can be added manually here, for example:
         // packages.add(MyReactNativePackage())
         // Remember to include them in `settings.gradle` and `app/build.gradle` too.
@@ -43,10 +42,12 @@ class ReactNativeFragment : Fragment() {
             .setCurrentActivity(activity)
             .setBundleAssetName("index.android.bundle")
             .setJSMainModulePath("index")
+            .addPackage(BridgeModulePackage())
             .addPackages(packages)
             .setUseDeveloperSupport(BuildConfig.DEBUG)
             .setInitialLifecycleState(LifecycleState.RESUMED)
             .build()
+
         // The string here (e.g. "MyReactNativeApp") has to match
         // the string in AppRegistry.registerComponent() in index.js
         mReactRootView?.startReactApplication(mReactInstanceManager, getMainComponentName(), null)
