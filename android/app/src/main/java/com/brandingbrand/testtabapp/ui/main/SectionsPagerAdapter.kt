@@ -1,10 +1,15 @@
 package com.brandingbrand.testtabapp.ui.main
 
 import android.content.Context
+import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.brandingbrand.testtabapp.R
+import com.brandingbrand.testtabapp.ReactGatewayProvider
+import com.facebook.react.bridge.Arguments
+import com.facebook.react.bridge.ReadableMap
+import com.facebook.react.bridge.WritableMap
 
 private val TAB_TITLES = arrayOf(
         R.string.tab_text_1,
@@ -12,10 +17,6 @@ private val TAB_TITLES = arrayOf(
         R.string.tab_text_3
 )
 
-/**
- * A [FragmentPagerAdapter] that returns a fragment corresponding to
- * one of the sections/tabs/pages.
- */
 class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
     : FragmentPagerAdapter(fm) {
 
@@ -23,7 +24,13 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
         while(position < 2) {
             return PlaceholderFragment.newInstance(position + 1)
         }
-        return ReactNativeFragment.newInstance()
+
+        val propsBundle = Bundle()
+        propsBundle.putString("foo", "bar")
+        return ReactGatewayProvider.defaultProvider().newReactGatewayFragment(
+            "index",
+            "index.android.bundle",
+            propsBundle)
     }
 
     override fun getPageTitle(position: Int): CharSequence? {

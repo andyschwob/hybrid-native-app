@@ -1,4 +1,4 @@
-package com.brandingbrand.testtabapp
+package com.brandingbrand.testtabapp.bridgemodule
 
 import android.view.View
 import com.facebook.react.ReactPackage

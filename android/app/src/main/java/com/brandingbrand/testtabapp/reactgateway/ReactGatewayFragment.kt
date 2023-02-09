@@ -1,13 +1,12 @@
-package com.brandingbrand.testtabapp.ui.main
+package com.brandingbrand.testtabapp.reactgateway
 
-import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.brandingbrand.testtabapp.*
+import com.brandingbrand.testtabapp.bridgemodule.BridgeModulePackage
 import com.facebook.react.PackageList
 import com.facebook.react.ReactInstanceManager
 import com.facebook.react.ReactPackage
@@ -16,45 +15,37 @@ import com.facebook.react.common.LifecycleState
 import com.facebook.soloader.SoLoader
 
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ReactNativeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class ReactNativeFragment : Fragment() {
+class ReactGatewayFragment(private var modulePath: String,
+                           private var bundleAssetName: String,
+                           private var initialProps: Bundle?
+                           ) : Fragment() {
+
     private var mReactRootView: ReactRootView? = null
     private var mReactInstanceManager: ReactInstanceManager? = null
-    private fun getMainComponentName(): String {
-        return "ComponentOne"
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         SoLoader.init(activity?.baseContext, false)
+
         mReactRootView = ReactRootView(activity?.baseContext)
+
         val packages: List<ReactPackage> = PackageList(activity?.application).packages
-        Log.d("PACKAGES!", packages.toString())
-        // Packages that cannot be autolinked yet can be added manually here, for example:
-        // packages.add(MyReactNativePackage())
-        // Remember to include them in `settings.gradle` and `app/build.gradle` too.
         mReactInstanceManager = ReactInstanceManager.builder()
             .setApplication(activity?.application)
             .setCurrentActivity(activity)
-            .setBundleAssetName("index.android.bundle")
-            .setJSMainModulePath("index")
+            .setBundleAssetName(bundleAssetName) //"index.android.bundle"
+            .setJSMainModulePath(modulePath) // index
             .addPackage(BridgeModulePackage())
             .addPackages(packages)
             .setUseDeveloperSupport(BuildConfig.DEBUG)
             .setInitialLifecycleState(LifecycleState.RESUMED)
             .build()
 
-        // The string here (e.g. "MyReactNativeApp") has to match
-        // the string in AppRegistry.registerComponent() in index.js
-        mReactRootView?.startReactApplication(mReactInstanceManager, getMainComponentName(), null)
+        mReactRootView?.startReactApplication(mReactInstanceManager, getMainComponentName(), initialProps)
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
+    private fun getMainComponentName(): String {
+        return "ComponentOne"
     }
 
     override fun onCreateView(
@@ -62,10 +53,5 @@ class ReactNativeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return mReactRootView
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance() = ReactNativeFragment()
     }
 }
