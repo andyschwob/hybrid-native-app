@@ -54,4 +54,5 @@ class ReactGatewayFragment(private var modulePath: String,
     ): View? {
         return mReactRootView
     }
+
 }

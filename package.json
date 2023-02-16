@@ -8,7 +8,7 @@
   "dependencies": {
     "@babel/core": "^7.20.12",
     "@brandingbrand/fsengagement": "^11.81.0",
-    "react": "^18.0.2",
-    "react-native": "^0.71.0"
+    "react": "16.13.1",
+    "react-native": "0.63.5"
   }
 }

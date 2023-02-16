@@ -14,8 +14,9 @@
 		260A690C2989BD76009EA17C /* ReactGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A690B2989BD76009EA17C /* ReactGateway.m */; };
 		260A6915298AD8AF009EA17C /* BridgeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A6914298AD8AF009EA17C /* BridgeModule.m */; };
 		260A6918298ADDF0009EA17C /* BridgeModuleEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A6917298ADDF0009EA17C /* BridgeModuleEvent.m */; };
-		26A0BA4A298DA585001C58AF /* ReactGatewayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0BA49298DA585001C58AF /* ReactGatewayManager.swift */; };
 		26A0BA51298DB3E4001C58AF /* BridgeModuleConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A0BA50298DB3E4001C58AF /* BridgeModuleConstants.m */; };
+		26C4A9A8299B17F700BBDCE1 /* ReactGatewayProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4A9A6299B17F700BBDCE1 /* ReactGatewayProvider.swift */; };
+		26C4A9A9299B17F700BBDCE1 /* ReactNativeBridgeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4A9A7299B17F700BBDCE1 /* ReactNativeBridgeDelegate.swift */; };
 		26CAD663298051200084BF54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD662298051200084BF54 /* AppDelegate.swift */; };
 		26CAD665298051200084BF54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD664298051200084BF54 /* SceneDelegate.swift */; };
 		26CAD667298051200084BF54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD666298051200084BF54 /* ViewController.swift */; };
@@ -27,7 +28,6 @@
 		26CAD693298051700084BF54 /* TabOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD692298051700084BF54 /* TabOne.swift */; };
 		26CAD695298051790084BF54 /* TabTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD694298051790084BF54 /* TabTwo.swift */; };
 		26CAD69B2981B1400084BF54 /* TestTabAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD679298051220084BF54 /* TestTabAppTests.swift */; };
-		9321D19E6F908AE513E60522 /* libPods-TestTabApp-TestTabAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E23843CF861EB6477E70B64 /* libPods-TestTabApp-TestTabAppUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +56,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		08AA57A65A7B96AF8F836BC9 /* Pods-TestTabApp-TestTabAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp-TestTabAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		1DB4BE716F33E12B52CF1D1C /* Pods-TestTabApp-TestTabAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp-TestTabAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		260A68FB2982F5CD009EA17C /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		260A69032989BC17009EA17C /* TestTabApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestTabApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		260A690A2989BD76009EA17C /* ReactGateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactGateway.h; sourceTree = "<group>"; };
@@ -66,9 +64,10 @@
 		260A6914298AD8AF009EA17C /* BridgeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModule.m; sourceTree = "<group>"; };
 		260A6916298ADDF0009EA17C /* BridgeModuleEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeModuleEvent.h; sourceTree = "<group>"; };
 		260A6917298ADDF0009EA17C /* BridgeModuleEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModuleEvent.m; sourceTree = "<group>"; };
-		26A0BA49298DA585001C58AF /* ReactGatewayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactGatewayManager.swift; sourceTree = "<group>"; };
 		26A0BA4F298DB3E4001C58AF /* BridgeModuleConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeModuleConstants.h; sourceTree = "<group>"; };
 		26A0BA50298DB3E4001C58AF /* BridgeModuleConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModuleConstants.m; sourceTree = "<group>"; };
+		26C4A9A6299B17F700BBDCE1 /* ReactGatewayProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactGatewayProvider.swift; sourceTree = "<group>"; };
+		26C4A9A7299B17F700BBDCE1 /* ReactNativeBridgeDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactNativeBridgeDelegate.swift; sourceTree = "<group>"; };
 		26CAD65F298051200084BF54 /* TestTabApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTabApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CAD662298051200084BF54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26CAD664298051200084BF54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +82,6 @@
 		26CAD685298051220084BF54 /* TestTabAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		26CAD692298051700084BF54 /* TabOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOne.swift; sourceTree = "<group>"; };
 		26CAD694298051790084BF54 /* TabTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTwo.swift; sourceTree = "<group>"; };
-		5E23843CF861EB6477E70B64 /* libPods-TestTabApp-TestTabAppUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTabApp-TestTabAppUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A97698F07F05036C8CE0984 /* Pods-TestTabApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp.release.xcconfig"; path = "Target Support Files/Pods-TestTabApp/Pods-TestTabApp.release.xcconfig"; sourceTree = "<group>"; };
 		A195EE4B8657E8E380E2935B /* Pods-TestTabApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp.debug.xcconfig"; path = "Target Support Files/Pods-TestTabApp/Pods-TestTabApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CB59BCD5C8A003DF63869F51 /* libPods-TestTabApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTabApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9321D19E6F908AE513E60522 /* libPods-TestTabApp-TestTabAppUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +142,8 @@
 		26CAD661298051200084BF54 /* TestTabApp */ = {
 			isa = PBXGroup;
 			children = (
+				26C4A9A6299B17F700BBDCE1 /* ReactGatewayProvider.swift */,
+				26C4A9A7299B17F700BBDCE1 /* ReactNativeBridgeDelegate.swift */,
 				26CAD662298051200084BF54 /* AppDelegate.swift */,
 				26CAD664298051200084BF54 /* SceneDelegate.swift */,
 				26CAD666298051200084BF54 /* ViewController.swift */,
@@ -160,7 +159,6 @@
 				260A6914298AD8AF009EA17C /* BridgeModule.m */,
 				260A6916298ADDF0009EA17C /* BridgeModuleEvent.h */,
 				260A6917298ADDF0009EA17C /* BridgeModuleEvent.m */,
-				26A0BA49298DA585001C58AF /* ReactGatewayManager.swift */,
 				26A0BA4F298DB3E4001C58AF /* BridgeModuleConstants.h */,
 				26A0BA50298DB3E4001C58AF /* BridgeModuleConstants.m */,
 			);
@@ -189,7 +187,6 @@
 			children = (
 				260A68FB2982F5CD009EA17C /* JavaScriptCore.framework */,
 				CB59BCD5C8A003DF63869F51 /* libPods-TestTabApp.a */,
-				5E23843CF861EB6477E70B64 /* libPods-TestTabApp-TestTabAppUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,8 +196,6 @@
 			children = (
 				A195EE4B8657E8E380E2935B /* Pods-TestTabApp.debug.xcconfig */,
 				8A97698F07F05036C8CE0984 /* Pods-TestTabApp.release.xcconfig */,
-				1DB4BE716F33E12B52CF1D1C /* Pods-TestTabApp-TestTabAppUITests.debug.xcconfig */,
-				08AA57A65A7B96AF8F836BC9 /* Pods-TestTabApp-TestTabAppUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -217,7 +212,6 @@
 				26CAD65C298051200084BF54 /* Frameworks */,
 				26CAD65D298051200084BF54 /* Resources */,
 				26CAD6A82981B3530084BF54 /* Embed Frameworks */,
-				0C2E2B6D303B4A17ECDE0762 /* [CP] Embed Pods Frameworks */,
 				80B4B502A8822E2F80CA1627 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -233,12 +227,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26CAD68F298051220084BF54 /* Build configuration list for PBXNativeTarget "TestTabAppUITests" */;
 			buildPhases = (
-				1553385484F39C0CB52660A3 /* [CP] Check Pods Manifest.lock */,
 				26CAD67B298051220084BF54 /* Sources */,
 				26CAD67C298051220084BF54 /* Frameworks */,
 				26CAD67D298051220084BF54 /* Resources */,
-				A822F5CAEC90EDBFB9741DB9 /* [CP] Embed Pods Frameworks */,
-				DD9A46C038F33B2DEEB630EF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,45 +301,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C2E2B6D303B4A17ECDE0762 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp/Pods-TestTabApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp/Pods-TestTabApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestTabApp/Pods-TestTabApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1553385484F39C0CB52660A3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TestTabApp-TestTabAppUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6E2E0069D5322D232AE0513D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,40 +340,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestTabApp/Pods-TestTabApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A822F5CAEC90EDBFB9741DB9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD9A46C038F33B2DEEB630EF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestTabApp-TestTabAppUITests/Pods-TestTabApp-TestTabAppUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -429,15 +347,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C4A9A9299B17F700BBDCE1 /* ReactNativeBridgeDelegate.swift in Sources */,
 				26CAD695298051790084BF54 /* TabTwo.swift in Sources */,
 				260A690C2989BD76009EA17C /* ReactGateway.m in Sources */,
 				26CAD693298051700084BF54 /* TabOne.swift in Sources */,
 				26CAD667298051200084BF54 /* ViewController.swift in Sources */,
 				26CAD69B2981B1400084BF54 /* TestTabAppTests.swift in Sources */,
+				26C4A9A8299B17F700BBDCE1 /* ReactGatewayProvider.swift in Sources */,
 				260A6915298AD8AF009EA17C /* BridgeModule.m in Sources */,
 				26A0BA51298DB3E4001C58AF /* BridgeModuleConstants.m in Sources */,
 				26CAD663298051200084BF54 /* AppDelegate.swift in Sources */,
-				26A0BA4A298DA585001C58AF /* ReactGatewayManager.swift in Sources */,
 				26CAD665298051200084BF54 /* SceneDelegate.swift in Sources */,
 				260A6918298ADDF0009EA17C /* BridgeModuleEvent.m in Sources */,
 			);
@@ -669,7 +588,6 @@
 		};
 		26CAD690298051220084BF54 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DB4BE716F33E12B52CF1D1C /* Pods-TestTabApp-TestTabAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -693,7 +611,6 @@
 		};
 		26CAD691298051220084BF54 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08AA57A65A7B96AF8F836BC9 /* Pods-TestTabApp-TestTabAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
