@@ -8,5 +8,9 @@
 #import "BridgeModuleConstants.h"
 
 @implementation BridgeModuleConstants
-NSNotificationName const ReactBridgeEventIdentifier = @"com.brandingbrand.sdk:message";
+
+NSNotificationName const ReactBridgeExitEvent = @"com.brandingbrand.sdk:EXIT";
+NSNotificationName const ReactBridgeDeepLinkEvent = @"com.brandingbrand.sdk:DEEPLINK";
+NSNotificationName const ReactBridgeShowPostEvent = @"com.brandingbrand.sdk:SHOWPOST";
+
 @end

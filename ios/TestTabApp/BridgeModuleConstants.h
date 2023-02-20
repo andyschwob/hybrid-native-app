@@ -10,7 +10,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BridgeModuleConstants : NSObject
-extern NSNotificationName const ReactBridgeEventIdentifier;
+
+extern NSNotificationName const ReactBridgeExitEvent;
+extern NSNotificationName const ReactBridgeDeepLinkEvent;
+extern NSNotificationName const ReactBridgeShowPostEvent;
+
 @end
 
 NS_ASSUME_NONNULL_END

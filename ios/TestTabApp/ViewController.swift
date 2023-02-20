@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UITabBarController, UITabBarControllerDelegate, ReactGatewayProviderDelegate {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
@@ -25,15 +26,16 @@ class ViewController: UITabBarController, UITabBarControllerDelegate, ReactGatew
         tabTwo.tabBarItem = tabTwoBarItem
         self.viewControllers = [tabOne, tabTwo]
         
-        let jsBundle = URL.init(string: "http://localhost:8081/index.bundle?platform=ios")!
-        let moduleName = "ComponentOne"
-        let initialProps = ["foo": "bar"]
+//        let jsBundle = URL.init(string: "http://localhost:8081/index.bundle?platform=ios")!
+//        let moduleName = "ComponentOne"
+//        let initialProps = ["foo": "bar"]
         
         let reactGatewayProvider = ReactGatewayProvider.defaultProvider
         reactGatewayProvider.delegate = self
-        let reactTab = reactGatewayProvider.newReactGatway(jsBundle: jsBundle,
-                                                           moduleName: moduleName,
-                                                           initialProps: initialProps)
+//        let reactTab = reactGatewayProvider.newReactGatway(jsBundle: jsBundle,
+//                                                           moduleName: moduleName,
+//                                                           initialProps: initialProps)
+        let reactTab = reactGatewayProvider.getFeedViewController(accountId: nil, profileAttributes: nil)
         
         let reactBarItem = UITabBarItem(title: "RN Tab", image: UIImage(named: "defaultImage2.png"), selectedImage: UIImage(named: "selectedImage2.png"))
         reactTab.tabBarItem = reactBarItem
@@ -41,23 +43,18 @@ class ViewController: UITabBarController, UITabBarControllerDelegate, ReactGatew
     }
     
     //MARK: React Gateway Delegate
-    func didReceiveReactApplicationEvent(event: BridgeModuleEvent) {
-        print("EVENT RECEIVED: \(event.typeDescrition())")
-        
-        switch (event.eventType) {
-        case .exit:
-            print("Exit")
-        case .link:
-            print("Link")
-        case .action:
-            print("Action")
-        default:
-            return
-        }
-
-        print("\(event.invokingComponent)")
-        print("\(event.data)")
+    func didReceiveShowPostEvent(event: ShowPostEvent) {
+        print("Show post: \(event.postId)")
     }
+    
+    func didReceiveExitEvent(event: ExitEvent) {
+        print("Should exit application: \(event.invokingComponent)")
+    }
+    
+    func didReceiveDeepLinkEvent(event: DeepLinkEvent) {
+        print("Open Deeplink: \(event.url)")
+    }
+    
 
     //MARK: Tab Bar delegate
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {

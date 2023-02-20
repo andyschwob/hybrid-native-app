@@ -6,16 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BridgeModuleEvent.h"
+#import "ShowPostEvent.h"
+#import "ExitEvent.h"
+#import "DeepLinkEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class ReactGateway;
-@protocol ReactGatewayDelegate <NSObject>
-
-- (void)didReceiveReactApplicationEvent:(BridgeModuleEvent *)event;
-
-@end
 
 @interface ReactGateway : UIViewController
 

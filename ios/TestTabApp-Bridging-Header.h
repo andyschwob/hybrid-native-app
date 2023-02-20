@@ -3,5 +3,7 @@
 //
 
 #import "ReactGateway.h"
-#import "BridgeModuleEvent.h"
+#import "DeepLinkEvent.h"
+#import "ShowPostEvent.h"
+#import "ExitEvent.h"
 #import "BridgeModuleConstants.h"

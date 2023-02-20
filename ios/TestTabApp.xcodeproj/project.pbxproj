@@ -13,7 +13,6 @@
 		260A69002982F729009EA17C /* Pods_TestTabApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6B1343DF9C1E7310614385 /* Pods_TestTabApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		260A690C2989BD76009EA17C /* ReactGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A690B2989BD76009EA17C /* ReactGateway.m */; };
 		260A6915298AD8AF009EA17C /* BridgeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A6914298AD8AF009EA17C /* BridgeModule.m */; };
-		260A6918298ADDF0009EA17C /* BridgeModuleEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A6917298ADDF0009EA17C /* BridgeModuleEvent.m */; };
 		26A0BA51298DB3E4001C58AF /* BridgeModuleConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A0BA50298DB3E4001C58AF /* BridgeModuleConstants.m */; };
 		26C4A9A8299B17F700BBDCE1 /* ReactGatewayProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4A9A6299B17F700BBDCE1 /* ReactGatewayProvider.swift */; };
 		26C4A9A9299B17F700BBDCE1 /* ReactNativeBridgeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4A9A7299B17F700BBDCE1 /* ReactNativeBridgeDelegate.swift */; };
@@ -28,6 +27,9 @@
 		26CAD693298051700084BF54 /* TabOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD692298051700084BF54 /* TabOne.swift */; };
 		26CAD695298051790084BF54 /* TabTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD694298051790084BF54 /* TabTwo.swift */; };
 		26CAD69B2981B1400084BF54 /* TestTabAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD679298051220084BF54 /* TestTabAppTests.swift */; };
+		26E6C12229A42CB6003D510F /* ExitEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E6C12129A42CB6003D510F /* ExitEvent.m */; };
+		26E6C12529A42CD0003D510F /* ShowPostEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E6C12429A42CD0003D510F /* ShowPostEvent.m */; };
+		26E6C12829A42CDF003D510F /* DeepLinkEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E6C12729A42CDF003D510F /* DeepLinkEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +64,6 @@
 		260A690B2989BD76009EA17C /* ReactGateway.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactGateway.m; sourceTree = "<group>"; };
 		260A6913298AD8AF009EA17C /* BridgeModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeModule.h; sourceTree = "<group>"; };
 		260A6914298AD8AF009EA17C /* BridgeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModule.m; sourceTree = "<group>"; };
-		260A6916298ADDF0009EA17C /* BridgeModuleEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeModuleEvent.h; sourceTree = "<group>"; };
-		260A6917298ADDF0009EA17C /* BridgeModuleEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModuleEvent.m; sourceTree = "<group>"; };
 		26A0BA4F298DB3E4001C58AF /* BridgeModuleConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeModuleConstants.h; sourceTree = "<group>"; };
 		26A0BA50298DB3E4001C58AF /* BridgeModuleConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModuleConstants.m; sourceTree = "<group>"; };
 		26C4A9A6299B17F700BBDCE1 /* ReactGatewayProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactGatewayProvider.swift; sourceTree = "<group>"; };
@@ -82,6 +82,12 @@
 		26CAD685298051220084BF54 /* TestTabAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		26CAD692298051700084BF54 /* TabOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOne.swift; sourceTree = "<group>"; };
 		26CAD694298051790084BF54 /* TabTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTwo.swift; sourceTree = "<group>"; };
+		26E6C12029A42CB6003D510F /* ExitEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExitEvent.h; sourceTree = "<group>"; };
+		26E6C12129A42CB6003D510F /* ExitEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExitEvent.m; sourceTree = "<group>"; };
+		26E6C12329A42CD0003D510F /* ShowPostEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowPostEvent.h; sourceTree = "<group>"; };
+		26E6C12429A42CD0003D510F /* ShowPostEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowPostEvent.m; sourceTree = "<group>"; };
+		26E6C12629A42CDF003D510F /* DeepLinkEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeepLinkEvent.h; sourceTree = "<group>"; };
+		26E6C12729A42CDF003D510F /* DeepLinkEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeepLinkEvent.m; sourceTree = "<group>"; };
 		8A97698F07F05036C8CE0984 /* Pods-TestTabApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp.release.xcconfig"; path = "Target Support Files/Pods-TestTabApp/Pods-TestTabApp.release.xcconfig"; sourceTree = "<group>"; };
 		A195EE4B8657E8E380E2935B /* Pods-TestTabApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp.debug.xcconfig"; path = "Target Support Files/Pods-TestTabApp/Pods-TestTabApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CB59BCD5C8A003DF63869F51 /* libPods-TestTabApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTabApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,10 +163,14 @@
 				260A690B2989BD76009EA17C /* ReactGateway.m */,
 				260A6913298AD8AF009EA17C /* BridgeModule.h */,
 				260A6914298AD8AF009EA17C /* BridgeModule.m */,
-				260A6916298ADDF0009EA17C /* BridgeModuleEvent.h */,
-				260A6917298ADDF0009EA17C /* BridgeModuleEvent.m */,
 				26A0BA4F298DB3E4001C58AF /* BridgeModuleConstants.h */,
 				26A0BA50298DB3E4001C58AF /* BridgeModuleConstants.m */,
+				26E6C12029A42CB6003D510F /* ExitEvent.h */,
+				26E6C12129A42CB6003D510F /* ExitEvent.m */,
+				26E6C12329A42CD0003D510F /* ShowPostEvent.h */,
+				26E6C12429A42CD0003D510F /* ShowPostEvent.m */,
+				26E6C12629A42CDF003D510F /* DeepLinkEvent.h */,
+				26E6C12729A42CDF003D510F /* DeepLinkEvent.m */,
 			);
 			path = TestTabApp;
 			sourceTree = "<group>";
@@ -351,14 +361,16 @@
 				26CAD695298051790084BF54 /* TabTwo.swift in Sources */,
 				260A690C2989BD76009EA17C /* ReactGateway.m in Sources */,
 				26CAD693298051700084BF54 /* TabOne.swift in Sources */,
+				26E6C12229A42CB6003D510F /* ExitEvent.m in Sources */,
+				26E6C12829A42CDF003D510F /* DeepLinkEvent.m in Sources */,
 				26CAD667298051200084BF54 /* ViewController.swift in Sources */,
 				26CAD69B2981B1400084BF54 /* TestTabAppTests.swift in Sources */,
+				26E6C12529A42CD0003D510F /* ShowPostEvent.m in Sources */,
 				26C4A9A8299B17F700BBDCE1 /* ReactGatewayProvider.swift in Sources */,
 				260A6915298AD8AF009EA17C /* BridgeModule.m in Sources */,
 				26A0BA51298DB3E4001C58AF /* BridgeModuleConstants.m in Sources */,
 				26CAD663298051200084BF54 /* AppDelegate.swift in Sources */,
 				26CAD665298051200084BF54 /* SceneDelegate.swift in Sources */,
-				260A6918298ADDF0009EA17C /* BridgeModuleEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

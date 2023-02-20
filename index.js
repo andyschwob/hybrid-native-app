@@ -3,20 +3,26 @@ import { NativeModules } from "react-native";
 import { AppRegistry, StyleSheet, Text, View } from "react-native";
 
 const { BridgeModule } = NativeModules;
-const EventType = {
-  exit: "EXIT",
-  action: "ACTION",
-  link: "LINK",
-}
+
 const ReactNativeTest = () => {
-  BridgeModule.dispatchApplicationEvent({
+
+  // Dispatch for application exit so the receiving native code can handle navigation.
+  BridgeModule.dispatchExitEvent({
     component: "ComponentOne",
-    event: EventType.exit,
-    data: {
-      data : "ADDITIONAL DATA",
-      moreData: "More Data"
-    }
   });
+
+  // Dispatch deep link to receiving application. 
+  BridgeModule.dispatchDeepLinkEvent({
+    component: "ComponentOne",
+    url: "/discover/messageid"
+  });
+
+  //Dispatch show post event to receiving application. 
+  BridgeModule.dispatchShowPostEvent({
+    component: "ComponentOne",
+    postId: "1337"
+  });
+
   return (
     <View style={styles.container}>
       <Text style={styles.hello}>React Native Test</Text>

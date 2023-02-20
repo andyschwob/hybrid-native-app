@@ -17,16 +17,30 @@ RCT_EXPORT_MODULE(BridgeModule);
     return dispatch_get_main_queue();
 }
 
-RCT_EXPORT_METHOD(dispatchApplicationEvent:(NSDictionary *)data)
-{
-    [self dispatchResult:data];
-}
 
-- (void)dispatchResult:(NSDictionary *)data
+RCT_EXPORT_METHOD(dispatchExitEvent:(NSDictionary *)data)
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:ReactBridgeEventIdentifier
+    [[NSNotificationCenter defaultCenter] postNotificationName:ReactBridgeExitEvent
                                                         object:nil
                                                       userInfo:data];
+    
+}
+
+RCT_EXPORT_METHOD(dispatchDeepLinkEvent:(NSDictionary *)data)
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:ReactBridgeDeepLinkEvent
+                                                        object:nil
+                                                      userInfo:data];
+    
+}
+
+RCT_EXPORT_METHOD(dispatchShowPostEvent:(NSDictionary *)data)
+{
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:ReactBridgeShowPostEvent
+                                                        object:nil
+                                                      userInfo:data];
+    
 }
 
 @end
