@@ -30,6 +30,7 @@
 		26E6C12229A42CB6003D510F /* ExitEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E6C12129A42CB6003D510F /* ExitEvent.m */; };
 		26E6C12529A42CD0003D510F /* ShowPostEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E6C12429A42CD0003D510F /* ShowPostEvent.m */; };
 		26E6C12829A42CDF003D510F /* DeepLinkEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E6C12729A42CDF003D510F /* DeepLinkEvent.m */; };
+		26E6C12B29A45793003D510F /* BridgeModuleEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E6C12A29A45793003D510F /* BridgeModuleEventEmitter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		26E6C12429A42CD0003D510F /* ShowPostEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowPostEvent.m; sourceTree = "<group>"; };
 		26E6C12629A42CDF003D510F /* DeepLinkEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeepLinkEvent.h; sourceTree = "<group>"; };
 		26E6C12729A42CDF003D510F /* DeepLinkEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeepLinkEvent.m; sourceTree = "<group>"; };
+		26E6C12929A45793003D510F /* BridgeModuleEventEmitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeModuleEventEmitter.h; sourceTree = "<group>"; };
+		26E6C12A29A45793003D510F /* BridgeModuleEventEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModuleEventEmitter.m; sourceTree = "<group>"; };
 		8A97698F07F05036C8CE0984 /* Pods-TestTabApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp.release.xcconfig"; path = "Target Support Files/Pods-TestTabApp/Pods-TestTabApp.release.xcconfig"; sourceTree = "<group>"; };
 		A195EE4B8657E8E380E2935B /* Pods-TestTabApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTabApp.debug.xcconfig"; path = "Target Support Files/Pods-TestTabApp/Pods-TestTabApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CB59BCD5C8A003DF63869F51 /* libPods-TestTabApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTabApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +174,8 @@
 				26E6C12429A42CD0003D510F /* ShowPostEvent.m */,
 				26E6C12629A42CDF003D510F /* DeepLinkEvent.h */,
 				26E6C12729A42CDF003D510F /* DeepLinkEvent.m */,
+				26E6C12929A45793003D510F /* BridgeModuleEventEmitter.h */,
+				26E6C12A29A45793003D510F /* BridgeModuleEventEmitter.m */,
 			);
 			path = TestTabApp;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				26A0BA51298DB3E4001C58AF /* BridgeModuleConstants.m in Sources */,
 				26CAD663298051200084BF54 /* AppDelegate.swift in Sources */,
 				26CAD665298051200084BF54 /* SceneDelegate.swift in Sources */,
+				26E6C12B29A45793003D510F /* BridgeModuleEventEmitter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

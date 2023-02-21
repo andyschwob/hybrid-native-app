@@ -10,7 +10,9 @@
 @implementation BridgeModuleConstants
 
 NSNotificationName const ReactBridgeExitEvent = @"com.brandingbrand.sdk:EXIT";
-NSNotificationName const ReactBridgeDeepLinkEvent = @"com.brandingbrand.sdk:DEEPLINK";
-NSNotificationName const ReactBridgeShowPostEvent = @"com.brandingbrand.sdk:SHOWPOST";
+NSNotificationName const ReactBridgeDeepLinkEvent = @"com.brandingbrand.sdk:DEEP_LINK";
+NSNotificationName const ReactBridgeShowPostEvent = @"com.brandingbrand.sdk:SHOW_POST";
+NSNotificationName const ReactBridgeNativeEvent = @"com.brandingbrand.sdk:NATIVE_EVENT";
+
 
 @end

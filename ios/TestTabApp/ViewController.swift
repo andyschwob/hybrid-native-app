@@ -40,6 +40,12 @@ class ViewController: UITabBarController, UITabBarControllerDelegate, ReactGatew
         let reactBarItem = UITabBarItem(title: "RN Tab", image: UIImage(named: "defaultImage2.png"), selectedImage: UIImage(named: "selectedImage2.png"))
         reactTab.tabBarItem = reactBarItem
         self.viewControllers = [tabOne, tabTwo, reactTab]
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10) {
+            print("invoked")
+            let props = ["attributes" : ["foo" : "bar"]]
+            reactGatewayProvider.sendProfileAttributes(attributes: props)
+        }
     }
     
     //MARK: React Gateway Delegate

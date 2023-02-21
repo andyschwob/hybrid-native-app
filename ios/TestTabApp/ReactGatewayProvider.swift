@@ -128,6 +128,10 @@ class ReactGatewayProvider {
             delegate?.didReceiveShowPostEvent(event: event)
         }
     }
+    
+    func sendProfileAttributes(attributes: Dictionary<AnyHashable, Any>) {
+        NotificationCenter.default.post(name: Notification.Name.ReactBridgeNativeEvent, object: nil, userInfo: attributes)
+    }
 }
 
 

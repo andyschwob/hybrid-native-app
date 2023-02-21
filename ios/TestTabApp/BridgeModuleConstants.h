@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 extern NSNotificationName const ReactBridgeExitEvent;
 extern NSNotificationName const ReactBridgeDeepLinkEvent;
 extern NSNotificationName const ReactBridgeShowPostEvent;
+extern NSNotificationName const ReactBridgeNativeEvent;
 
 @end
 

@@ -7,3 +7,4 @@
 #import "ShowPostEvent.h"
 #import "ExitEvent.h"
 #import "BridgeModuleConstants.h"
+#import "BridgeModuleEventEmitter.h"
