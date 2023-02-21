@@ -228,6 +228,7 @@
 				26CAD65D298051200084BF54 /* Resources */,
 				26CAD6A82981B3530084BF54 /* Embed Frameworks */,
 				80B4B502A8822E2F80CA1627 /* [CP] Copy Pods Resources */,
+				6C3B3B27EF1AAE516F706CFA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -316,6 +317,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6C3B3B27EF1AAE516F706CFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp/Pods-TestTabApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTabApp/Pods-TestTabApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestTabApp/Pods-TestTabApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6E2E0069D5322D232AE0513D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
