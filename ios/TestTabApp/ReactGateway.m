@@ -8,11 +8,15 @@
 #import "ReactGateway.h"
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
-#import <React/RCTBridgeModule.h>
+#import "ShowPostEvent.h"
+#import "ExitEvent.h"
+#import "DeepLinkEvent.h"
+#import "TestTabApp-Swift.h"
+
 
 @interface ReactGateway ()
 
-@property (nonatomic, strong) NSURL *bundle;
+@property (nonatomic, strong) RCTBridge *bridge;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSDictionary *props;
 
@@ -21,12 +25,12 @@
 
 @implementation ReactGateway
 
-- (instancetype)initWithJsBundle:(NSURL*)bundle
+- (instancetype)initWithBridge:(RCTBridge *)bridge
                       moduleName:(NSString *)name
                     initialProps:(nullable NSDictionary *)props
 {
     self = [super init];
-    _bundle = bundle;
+    _bridge = bridge;
     _name = name;
     _props = props;
     return self;
@@ -35,10 +39,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:self.bundle
-                                                        moduleName:self.name
-                                                 initialProperties:self.props
-                                                     launchOptions:nil];
+    
+    RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:self.bridge
+                                                      moduleName:self.name
+                                               initialProperties:self.props];
     self.view = rootView;
 }
 

@@ -6,9 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ShowPostEvent.h"
-#import "ExitEvent.h"
-#import "DeepLinkEvent.h"
+#import <React/RCTBridgeModule.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ReactGateway : UIViewController
 
-- (instancetype)initWithJsBundle:(NSURL*)bundle
+- (instancetype)initWithBridge:(RCTBridge *)bridge
                       moduleName:(NSString *)name
-                    initialProps:(nullable NSDictionary *)props;
+                  initialProps:(nullable NSDictionary *)props;
 
 @end
 

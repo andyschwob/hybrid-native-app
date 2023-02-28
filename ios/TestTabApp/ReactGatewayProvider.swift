@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import React
 
 protocol ReactGatewayProviderDelegate : NSObjectProtocol {
     func didReceiveShowPostEvent(event: ShowPostEvent)
@@ -13,19 +14,23 @@ protocol ReactGatewayProviderDelegate : NSObjectProtocol {
     func didReceiveDeepLinkEvent(event: DeepLinkEvent)
 }
 
-class ReactGatewayProvider {
+class ReactGatewayProvider: NSObject, RCTBridgeDelegate {
     
     static let defaultProvider = ReactGatewayProvider()
+    
     weak var delegate: ReactGatewayProviderDelegate? {
         didSet {
             delegate != nil ? addEventObservers() : removeEventObservers()
         }
     }
+    
     private var gateways: [ReactGateway] = []
     private var appId: String = ""
+    private var bridgeHolder: RCTBridge?
+    
     
     //MARK: Lifecycle
-    private init() {
+    private override init() {
         // Get app id from plist
         guard let plistPath = Bundle.main.path(forResource: "Info", ofType: "plist") else {
             return
@@ -39,6 +44,7 @@ class ReactGatewayProvider {
         else {
             print("EngagementSDK: Could not retreive application id from .plist")
         }
+        
     }
     
     deinit {
@@ -70,34 +76,37 @@ class ReactGatewayProvider {
     }
     
     //MARK: React Native host View Controller
-    func newReactGatway(jsBundle: URL,
-                        moduleName: String,
-                        initialProps: Dictionary<AnyHashable, Any>) -> ReactGateway {
-        
-        let reactTab = ReactGateway.init(jsBundle: jsBundle,
-                                         moduleName: moduleName,
-                                         initialProps: initialProps);
-        return reactTab
-    }
-    
-    //TODO: Refactor bunlde location and get expected keys for values in engagement componenet
-    func getFeedViewController(accountId: String?, profileAttributes: Dictionary<AnyHashable, Any>?) -> ReactGateway {
+        func getFeedViewController(accountId: String?, profileAttributes: Dictionary<AnyHashable, Any>?) -> ReactGateway {
         var props = profileAttributes ?? Dictionary<AnyHashable, Any>.init()
-        let jsBundle = URL.init(string: "http://localhost:8081/index.bundle?platform=ios")!
         if (accountId != nil) {
             let appenededDict = NSMutableDictionary.init(dictionary: props)
-            appenededDict.setValue(accountId, forKey: "AccountId")
+            appenededDict.setValue(accountId, forKey: "accountId")
             props = appenededDict as Dictionary
         }
-        return ReactGateway.init(jsBundle: jsBundle, moduleName: "ComponentOne", initialProps: props)
+        return ReactGateway.init(bridge: self.currentBridge(), moduleName: "ComponentOne", initialProps: props)
     }
     
     //TODO: Refactor bunlde location and get expected keys for values in engagement componenet
-    func getPostViewController(postId: String) -> ReactGateway {
-        let props: Dictionary<AnyHashable, Any> = ["postID": postId]
-        let jsBundle = URL.init(string: "http://localhost:8081/index.bundle?platform=ios")!
-        return ReactGateway.init(jsBundle: jsBundle, moduleName: "ComponentOne", initialProps: props)
+    func getPostViewController(showPostProps: ShowPostProps) -> ReactGateway {
+        let props: Dictionary<AnyHashable, Any> = showPostProps.getJSObjectRepresenation()
+        return ReactGateway.init(bridge: self.currentBridge(), moduleName: "ComponentOne", initialProps: props)
     }
+    
+    //MARK: React bridge delegate
+    func currentBridge() -> RCTBridge {
+         if let bridge = bridgeHolder {
+             return bridge
+         }
+         else {
+             // Possibly failable
+             bridgeHolder = RCTBridge.init(delegate: self, launchOptions: nil)
+             return bridgeHolder!
+         }
+     }
+     
+     func sourceURL(for bridge: RCTBridge!) -> URL! {
+         return URL.init(string: "http://localhost:8081/index.bundle?platform=ios")!
+     }
     
     // ReactGateway delegate
     @objc func didReceiveApplicationExit(notification: Notification) {
@@ -112,7 +121,7 @@ class ReactGatewayProvider {
     @objc func didReceiveDeepLink(notification: Notification) {
         guard let data = notification.userInfo else { return }
         
-        if let sender = data["component"] as? String, let destination = data["url"] as? String {
+        if let sender = data["component"] as? String, let destination = data["link"] as? String {
             if let url = URL.init(string: destination) {
                 let event = DeepLinkEvent.init(destinationURL: url, component: sender)
                 delegate?.didReceiveDeepLinkEvent(event: event)
@@ -121,17 +130,20 @@ class ReactGatewayProvider {
     }
     
     @objc func didReceiveShowPost(notification: Notification) {
-        guard let data = notification.userInfo else { return }
+        guard let eventData = notification.userInfo else { return }
         
-        if let sender = data["component"] as? String, let postId = data["postId"] as? String {
-            let event = ShowPostEvent.init(postId: postId, component: sender)
+        let event = ShowPostEvent.init(eventData: eventData)
+        if event.isValidEvent() {
             delegate?.didReceiveShowPostEvent(event: event)
+        } else {
+            print("EngagementSDK: malformed show post event received.")
         }
     }
     
     func sendProfileAttributes(attributes: Dictionary<AnyHashable, Any>) {
         NotificationCenter.default.post(name: Notification.Name.ReactBridgeNativeEvent, object: nil, userInfo: attributes)
     }
+    
 }
 
 

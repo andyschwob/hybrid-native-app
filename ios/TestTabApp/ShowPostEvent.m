@@ -9,15 +9,23 @@
 
 @implementation ShowPostEvent
 
-- (instancetype)initWithPostId:(NSString *)postId component:(NSString *)sender
+- (instancetype)initWithEventData:(NSDictionary *)data
 {
     self = [super init];
     if (self) {
-        _postId = postId;
-        _invokingComponent = sender;
+        _props = [[ShowPostProps alloc] initWithDataDictionary:data];
     }
     return self;
 }
 
+- (BOOL)isValidEvent
+{
+    if (self.props != nil && [self.props areValidProps]) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 
 @end

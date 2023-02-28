@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.brandingbrand.testtabapp.R
-import com.brandingbrand.testtabapp.ReactGatewayProvider
+import com.brandingbrand.testtabapp.reactgateway.ReactGatewayProvider
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableMap

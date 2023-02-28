@@ -19,13 +19,16 @@ const ReactNativeTest = () => {
   // Dispatch deep link to receiving application. 
   BridgeModule.dispatchDeepLinkEvent({
     component: "ComponentOne",
-    url: "/discover/messageid"
+    link: "/discover/messageid"
   });
 
   //Dispatch show post event to receiving application.
   BridgeModule.dispatchShowPostEvent({
     component: "ComponentOne",
-    postId: "1337"
+    name: "",
+    postId: "1337",
+    json: " ",
+    dynamicData: { }
   });
 
   return (

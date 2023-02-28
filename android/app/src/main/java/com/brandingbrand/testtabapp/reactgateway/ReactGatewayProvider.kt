@@ -1,26 +1,30 @@
-package com.brandingbrand.testtabapp
+package com.brandingbrand.testtabapp.reactgateway
 
 import android.os.Bundle
-import com.brandingbrand.testtabapp.bridgemodule.BridgeModuleEvent
-import com.brandingbrand.testtabapp.reactgateway.ReactGatewayActivity
-import com.brandingbrand.testtabapp.reactgateway.ReactGatewayFragment
-import org.greenrobot.eventbus.EventBus
-import org.greenrobot.eventbus.Subscribe
-import org.greenrobot.eventbus.ThreadMode
+import android.util.Log
+import com.brandingbrand.testtabapp.bridgemodule.BridgeModule
+import com.brandingbrand.testtabapp.bridgemodule.BridgeModuleDelegate
 
 interface ReactGatewayDelegate {
-    fun didReceiveReactApplicationEvent(event: BridgeModuleEvent)
+    fun didReceiveExitEvent(event: ExitEvent)
+    fun didReceiveDeepLinkEvent(event: DeepLinkEvent)
+    fun didReceiveShowPostEvent(event: ShowPostEvent)
 }
 
-object ReactGatewayProvider {
+object ReactGatewayProvider : BridgeModuleDelegate {
     var gatewayInterface: ReactGatewayDelegate? = null
+    var bridgeModule: BridgeModule? = null
+        set(value) {
+            field = value
+            if (value == null) {
+                field?.bridgeDelegate = null
+            } else {
+                field?.bridgeDelegate = this
+            }
+        }
 
     fun defaultProvider(): ReactGatewayProvider {
         return this
-    }
-
-    init {
-        EventBus.getDefault().register(this)
     }
 
     fun newReactGatewayFragment(modulePath: String, bundleAssetName: String, initialProps: Bundle?): ReactGatewayFragment {
@@ -31,9 +35,16 @@ object ReactGatewayProvider {
         return ReactGatewayActivity(modulePath, bundleAssetName, initialProps)
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onMessageEvent(event: BridgeModuleEvent) {
-        gatewayInterface?.didReceiveReactApplicationEvent(event)
+    override fun didReceiveExitEvent(event: ExitEvent) {
+        gatewayInterface?.didReceiveExitEvent(event)
+    }
+
+    override fun didReceiveDeepLinkEvent(event: DeepLinkEvent) {
+        gatewayInterface?.didReceiveDeepLinkEvent(event)
+    }
+
+    override fun didReceiveShowPostEvent(event: ShowPostEvent) {
+        gatewayInterface?.didReceiveShowPostEvent(event)
     }
 
 }

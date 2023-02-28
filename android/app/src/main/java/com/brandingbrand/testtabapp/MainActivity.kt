@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
-import com.brandingbrand.testtabapp.bridgemodule.BridgeModuleEvent
 import com.brandingbrand.testtabapp.databinding.ActivityMainBinding
+import com.brandingbrand.testtabapp.reactgateway.*
 
 import com.brandingbrand.testtabapp.ui.main.SectionsPagerAdapter
 import com.google.android.material.tabs.TabLayout
@@ -30,10 +30,18 @@ class MainActivity : AppCompatActivity(), ReactGatewayDelegate {
         ReactGatewayProvider.defaultProvider().gatewayInterface = this
     }
 
-    override fun didReceiveReactApplicationEvent(event: BridgeModuleEvent) {
-        Log.d("REACT_MESSAGE", event.invokingComponent)
-        Log.d("REACT_MESSAGE", event.eventType.toString())
-        Log.d("REACT_MESSAGE", event.additionalData.toString())
+    override fun didReceiveExitEvent(event: ExitEvent) {
+        Log.d("EXIT RECEIVED", event.invokingComponent)
+    }
+
+    override fun didReceiveDeepLinkEvent(event: DeepLinkEvent) {
+        Log.d("DEEP LINK RECEIVED", event.invokingComponent)
+        Log.d("DEEP LINK RECEIVED", event.link)
+    }
+
+    override fun didReceiveShowPostEvent(event: ShowPostEvent) {
+        Log.d("SHOW POST RECEIVED", event.invokingComponent)
+        Log.d("SHOW POST RECEIVED", event.postId)
     }
 
 }

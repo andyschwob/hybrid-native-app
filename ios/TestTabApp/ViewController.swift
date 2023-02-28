@@ -26,15 +26,9 @@ class ViewController: UITabBarController, UITabBarControllerDelegate, ReactGatew
         tabTwo.tabBarItem = tabTwoBarItem
         self.viewControllers = [tabOne, tabTwo]
         
-//        let jsBundle = URL.init(string: "http://localhost:8081/index.bundle?platform=ios")!
-//        let moduleName = "ComponentOne"
-//        let initialProps = ["foo": "bar"]
-        
         let reactGatewayProvider = ReactGatewayProvider.defaultProvider
         reactGatewayProvider.delegate = self
-//        let reactTab = reactGatewayProvider.newReactGatway(jsBundle: jsBundle,
-//                                                           moduleName: moduleName,
-//                                                           initialProps: initialProps)
+        
         let reactTab = reactGatewayProvider.getFeedViewController(accountId: nil, profileAttributes: nil)
         
         let reactBarItem = UITabBarItem(title: "RN Tab", image: UIImage(named: "defaultImage2.png"), selectedImage: UIImage(named: "selectedImage2.png"))
@@ -50,7 +44,7 @@ class ViewController: UITabBarController, UITabBarControllerDelegate, ReactGatew
     
     //MARK: React Gateway Delegate
     func didReceiveShowPostEvent(event: ShowPostEvent) {
-        print("Show post: \(event.postId)")
+        print("Show post: \(event.props.postId)")
     }
     
     func didReceiveExitEvent(event: ExitEvent) {

@@ -6,15 +6,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ShowPostProps.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ShowPostEvent : NSObject
 
-@property(nonatomic, strong) NSString *postId;
-@property(nonatomic, strong) NSString *invokingComponent;
+@property(nonatomic, strong) ShowPostProps *props;
 
-- (instancetype)initWithPostId:(NSString *)postId component:(NSString *)sender;
+- (instancetype)initWithEventData:(NSDictionary *)data;
+- (BOOL)isValidEvent;
+
 
 @end
 

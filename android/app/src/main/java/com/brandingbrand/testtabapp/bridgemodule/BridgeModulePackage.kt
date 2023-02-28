@@ -16,5 +16,4 @@ class BridgeModulePackage : ReactPackage {
     override fun createNativeModules(
         reactContext: ReactApplicationContext
     ): MutableList<NativeModule> = listOf(BridgeModule(reactContext)).toMutableList()
-
 }
