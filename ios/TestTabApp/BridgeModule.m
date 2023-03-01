@@ -6,42 +6,45 @@
 //
 
 #import "BridgeModule.h"
-#import "BridgeModuleConstants.h"
+#import "TestTabApp-Swift.h"
 
 @implementation BridgeModule
 
 RCT_EXPORT_MODULE(BridgeModule);
+
++ (BOOL)requiresMainQueueSetup
+{
+    return YES;
+}
 
 - (dispatch_queue_t)methodQueue
 {
     return dispatch_get_main_queue();
 }
 
+- (instancetype)init {
+    self = [super self];
+    if (self) {
+        [ReactGatewayProvider defaultProvider].bridgeModule = self;
+    }
+    return self;
+}
+
 
 RCT_EXPORT_METHOD(dispatchExitEvent:(NSDictionary *)data)
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:ReactBridgeExitEvent
-                                                        object:nil
-                                                      userInfo:data];
-    
+    [self.delegate didReceiveExitEvent:data];
 }
 
 RCT_EXPORT_METHOD(dispatchDeepLinkEvent:(NSDictionary *)data)
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:ReactBridgeDeepLinkEvent
-                                                        object:nil
-                                                      userInfo:data];
-    
+    [self.delegate didReceiveDeepLinkEvent:data];
 }
 
 RCT_EXPORT_METHOD(dispatchShowPostEvent:(NSDictionary *)data)
 {
-
-    [[NSNotificationCenter defaultCenter] postNotificationName:ReactBridgeShowPostEvent
-                                                        object:nil
-                                                      userInfo:data];
-    
+    [self.delegate didReceiveShowPostEvent:data];
 }
 
 @end
-    
+

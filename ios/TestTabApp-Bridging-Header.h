@@ -6,6 +6,6 @@
 #import "DeepLinkEvent.h"
 #import "ShowPostEvent.h"
 #import "ExitEvent.h"
-#import "BridgeModuleConstants.h"
 #import "BridgeModuleEventEmitter.h"
 #import "ShowPostProps.h"
+#import "BridgeModule.h"

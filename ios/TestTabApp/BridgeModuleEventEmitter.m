@@ -6,35 +6,44 @@
 //
 
 #import "BridgeModuleEventEmitter.h"
-#import "BridgeModuleConstants.h"
+#import "TestTabApp-Swift.h"
 
 @implementation BridgeModuleEventEmitter
 
 RCT_EXPORT_MODULE(BridgeModuleEventEmitter);
 RCT_EXTERN_METHOD(supportedEvents);
 
--(void)startObserving
++ (BOOL)requiresMainQueueSetup
 {
-    [NSNotificationCenter.defaultCenter addObserver:self
-                                           selector:@selector(dispatchEvent:)
-                                               name:ReactBridgeNativeEvent
-                                             object:nil];
+    return YES;
 }
 
--(void)stopObserving
+- (dispatch_queue_t)methodQueue
 {
-    [NSNotificationCenter.defaultCenter removeObserver:self];
+    return dispatch_get_main_queue();
 }
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [ReactGatewayProvider defaultProvider].eventEmitter = self;
+    }
+    return self;
+}
+
 
 - (NSArray<NSString *> *)supportedEvents {
     return @[@"onUpdateProfileAttributes"];
 }
 
-- (void)dispatchEvent:(NSNotification *)notification
+- (void)dispatchEvent:(NSDictionary *)profileAttributes
 {
-    if (notification.userInfo != nil) {
-        NSDictionary *profileAttributes = notification.userInfo;
+    if (profileAttributes != nil) {
         [self sendEventWithName:@"onUpdateProfileAttributes" body:profileAttributes];
+    }
+    else {
+        NSLog(@"Enganement SDK: Malformed profile attributes event received");
     }
 }
 

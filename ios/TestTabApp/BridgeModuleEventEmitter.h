@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BridgeModuleEventEmitter : RCTEventEmitter <RCTBridgeModule>
 
+- (void)dispatchEvent:(NSDictionary *)profileAttributes;
+
 @end
 
 NS_ASSUME_NONNULL_END

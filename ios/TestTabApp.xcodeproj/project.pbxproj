@@ -13,9 +13,7 @@
 		260A69002982F729009EA17C /* Pods_TestTabApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6B1343DF9C1E7310614385 /* Pods_TestTabApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		260A690C2989BD76009EA17C /* ReactGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A690B2989BD76009EA17C /* ReactGateway.m */; };
 		260A6915298AD8AF009EA17C /* BridgeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A6914298AD8AF009EA17C /* BridgeModule.m */; };
-		26A0BA51298DB3E4001C58AF /* BridgeModuleConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A0BA50298DB3E4001C58AF /* BridgeModuleConstants.m */; };
 		26C4A9A8299B17F700BBDCE1 /* ReactGatewayProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4A9A6299B17F700BBDCE1 /* ReactGatewayProvider.swift */; };
-		26C4A9A9299B17F700BBDCE1 /* ReactNativeBridgeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4A9A7299B17F700BBDCE1 /* ReactNativeBridgeDelegate.swift */; };
 		26C6599329AE725100D0E755 /* ShowPostProps.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C6599229AE725100D0E755 /* ShowPostProps.m */; };
 		26CAD663298051200084BF54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD662298051200084BF54 /* AppDelegate.swift */; };
 		26CAD665298051200084BF54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD664298051200084BF54 /* SceneDelegate.swift */; };
@@ -66,10 +64,7 @@
 		260A690B2989BD76009EA17C /* ReactGateway.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactGateway.m; sourceTree = "<group>"; };
 		260A6913298AD8AF009EA17C /* BridgeModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeModule.h; sourceTree = "<group>"; };
 		260A6914298AD8AF009EA17C /* BridgeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModule.m; sourceTree = "<group>"; };
-		26A0BA4F298DB3E4001C58AF /* BridgeModuleConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeModuleConstants.h; sourceTree = "<group>"; };
-		26A0BA50298DB3E4001C58AF /* BridgeModuleConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModuleConstants.m; sourceTree = "<group>"; };
 		26C4A9A6299B17F700BBDCE1 /* ReactGatewayProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactGatewayProvider.swift; sourceTree = "<group>"; };
-		26C4A9A7299B17F700BBDCE1 /* ReactNativeBridgeDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactNativeBridgeDelegate.swift; sourceTree = "<group>"; };
 		26C6599129AE725100D0E755 /* ShowPostProps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowPostProps.h; sourceTree = "<group>"; };
 		26C6599229AE725100D0E755 /* ShowPostProps.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowPostProps.m; sourceTree = "<group>"; };
 		26CAD65F298051200084BF54 /* TestTabApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTabApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				26C4A9A6299B17F700BBDCE1 /* ReactGatewayProvider.swift */,
-				26C4A9A7299B17F700BBDCE1 /* ReactNativeBridgeDelegate.swift */,
 				26CAD662298051200084BF54 /* AppDelegate.swift */,
 				26CAD664298051200084BF54 /* SceneDelegate.swift */,
 				26CAD666298051200084BF54 /* ViewController.swift */,
@@ -169,8 +163,6 @@
 				260A690B2989BD76009EA17C /* ReactGateway.m */,
 				260A6913298AD8AF009EA17C /* BridgeModule.h */,
 				260A6914298AD8AF009EA17C /* BridgeModule.m */,
-				26A0BA4F298DB3E4001C58AF /* BridgeModuleConstants.h */,
-				26A0BA50298DB3E4001C58AF /* BridgeModuleConstants.m */,
 				26E6C12029A42CB6003D510F /* ExitEvent.h */,
 				26E6C12129A42CB6003D510F /* ExitEvent.m */,
 				26E6C12329A42CD0003D510F /* ShowPostEvent.h */,
@@ -385,7 +377,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26C4A9A9299B17F700BBDCE1 /* ReactNativeBridgeDelegate.swift in Sources */,
 				26CAD695298051790084BF54 /* TabTwo.swift in Sources */,
 				260A690C2989BD76009EA17C /* ReactGateway.m in Sources */,
 				26CAD693298051700084BF54 /* TabOne.swift in Sources */,
@@ -397,7 +388,6 @@
 				26E6C12529A42CD0003D510F /* ShowPostEvent.m in Sources */,
 				26C4A9A8299B17F700BBDCE1 /* ReactGatewayProvider.swift in Sources */,
 				260A6915298AD8AF009EA17C /* BridgeModule.m in Sources */,
-				26A0BA51298DB3E4001C58AF /* BridgeModuleConstants.m in Sources */,
 				26CAD663298051200084BF54 /* AppDelegate.swift in Sources */,
 				26CAD665298051200084BF54 /* SceneDelegate.swift in Sources */,
 				26E6C12B29A45793003D510F /* BridgeModuleEventEmitter.m in Sources */,

@@ -14,16 +14,20 @@ protocol ReactGatewayProviderDelegate : NSObjectProtocol {
     func didReceiveDeepLinkEvent(event: DeepLinkEvent)
 }
 
-class ReactGatewayProvider: NSObject, RCTBridgeDelegate {
+class ReactGatewayProvider: NSObject, RCTBridgeDelegate, BridgeModuleProtocol {
     
-    static let defaultProvider = ReactGatewayProvider()
+    @objc static let defaultProvider = ReactGatewayProvider()
     
-    weak var delegate: ReactGatewayProviderDelegate? {
+    weak var delegate: ReactGatewayProviderDelegate?
+    @objc weak var bridgeModule: BridgeModule? {
         didSet {
-            delegate != nil ? addEventObservers() : removeEventObservers()
+            if (bridgeModule != nil) {
+                bridgeModule?.delegate = self
+            }
         }
     }
     
+    @objc var eventEmitter: BridgeModuleEventEmitter?
     private var gateways: [ReactGateway] = []
     private var appId: String = ""
     private var bridgeHolder: RCTBridge?
@@ -47,36 +51,8 @@ class ReactGatewayProvider: NSObject, RCTBridgeDelegate {
         
     }
     
-    deinit {
-        self.removeEventObservers()
-    }
-    
-    func addEventObservers() {
-        // Subscirbe to react events
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(self.didReceiveApplicationExit),
-                                               name: NSNotification.Name.ReactBridgeExitEvent,
-                                               object: nil)
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(self.didReceiveShowPost),
-                                               name: NSNotification.Name.ReactBridgeShowPostEvent,
-                                               object: nil)
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(self.didReceiveDeepLink),
-                                               name: NSNotification.Name.ReactBridgeDeepLinkEvent,
-                                               object: nil)
-        
-    }
-    
-    func removeEventObservers() {
-        // Remove self from notification center observers
-        NotificationCenter.default.removeObserver(self)
-    }
-    
     //MARK: React Native host View Controller
-        func getFeedViewController(accountId: String?, profileAttributes: Dictionary<AnyHashable, Any>?) -> ReactGateway {
+    func getFeedViewController(accountId: String?, profileAttributes: Dictionary<AnyHashable, Any>?) -> ReactGateway {
         var props = profileAttributes ?? Dictionary<AnyHashable, Any>.init()
         if (accountId != nil) {
             let appenededDict = NSMutableDictionary.init(dictionary: props)
@@ -94,44 +70,33 @@ class ReactGatewayProvider: NSObject, RCTBridgeDelegate {
     
     //MARK: React bridge delegate
     func currentBridge() -> RCTBridge {
-         if let bridge = bridgeHolder {
-             return bridge
-         }
-         else {
-             // Possibly failable
-             bridgeHolder = RCTBridge.init(delegate: self, launchOptions: nil)
-             return bridgeHolder!
-         }
-     }
-     
-     func sourceURL(for bridge: RCTBridge!) -> URL! {
-         return URL.init(string: "http://localhost:8081/index.bundle?platform=ios")!
-     }
+        if let bridge = bridgeHolder {
+            return bridge
+        }
+        else {
+            // Possibly failable
+            bridgeHolder = RCTBridge.init(delegate: self, launchOptions: nil)
+            return bridgeHolder!
+        }
+    }
     
-    // ReactGateway delegate
-    @objc func didReceiveApplicationExit(notification: Notification) {
-        guard let data = notification.userInfo else { return }
-        
-        if let sender = data["component"] as? String {
+    func sourceURL(for bridge: RCTBridge!) -> URL! {
+        return URL.init(string: "http://localhost:8081/index.bundle?platform=ios")!
+    }
+    
+    //MARK: BridgeModuleDelegate
+    
+    func didReceiveExitEvent(_ eventData: [AnyHashable : Any]) {
+        if let sender = eventData["component"] as? String {
             let event = ExitEvent.init(component: sender)
             delegate?.didReceiveExitEvent(event: event)
         }
-    }
-    
-    @objc func didReceiveDeepLink(notification: Notification) {
-        guard let data = notification.userInfo else { return }
-        
-        if let sender = data["component"] as? String, let destination = data["link"] as? String {
-            if let url = URL.init(string: destination) {
-                let event = DeepLinkEvent.init(destinationURL: url, component: sender)
-                delegate?.didReceiveDeepLinkEvent(event: event)
-            }
+        else {
+            
         }
     }
     
-    @objc func didReceiveShowPost(notification: Notification) {
-        guard let eventData = notification.userInfo else { return }
-        
+    func didReceiveShowPostEvent(_ eventData: [AnyHashable : Any]) {
         let event = ShowPostEvent.init(eventData: eventData)
         if event.isValidEvent() {
             delegate?.didReceiveShowPostEvent(event: event)
@@ -140,8 +105,19 @@ class ReactGatewayProvider: NSObject, RCTBridgeDelegate {
         }
     }
     
+    func didReceiveDeepLinkEvent(_ eventData: [AnyHashable : Any]) {
+        if let sender = eventData["component"] as? String,
+           let destination = eventData["link"] as? String {
+            if let url = URL.init(string: destination) {
+                let event = DeepLinkEvent.init(destinationURL: url, component: sender)
+                delegate?.didReceiveDeepLinkEvent(event: event)
+            }
+        }
+    }
+    
+    //MARK: RN event emitter
     func sendProfileAttributes(attributes: Dictionary<AnyHashable, Any>) {
-        NotificationCenter.default.post(name: Notification.Name.ReactBridgeNativeEvent, object: nil, userInfo: attributes)
+        eventEmitter?.dispatchEvent(attributes)
     }
     
 }
