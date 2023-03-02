@@ -83,8 +83,8 @@ object ReactGatewayProvider : BridgeModuleDelegate {
         return ReactGatewayFragment(POST_COMPONENT, initialProps)
     }
 
-    fun newPostActivity(initialProps: Bundle?): ReactGatewayActivity {
-        return ReactGatewayActivity(POST_COMPONENT, initialProps)
+    fun newPostActivity(event: ShowPostEvent): ReactGatewayActivity {
+        return ReactGatewayActivity(POST_COMPONENT, event.props.getJsObjectRepresentation())
     }
 
     override fun didReceiveExitEvent(event: ExitEvent) {
@@ -99,9 +99,10 @@ object ReactGatewayProvider : BridgeModuleDelegate {
         gatewayDelegate?.didReceiveShowPostEvent(event)
     }
 
-    fun sendProfileAttributes() {
-        this.mReactInstanceManager?.currentReactContext?.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter::class.java)
-            ?.emit("", null)
+    fun sendProfileAttributes(attributes: Bundle) {
+        this.mReactInstanceManager?.currentReactContext
+            ?.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter::class.java)
+            ?.emit("", attributes)
 
     }
 }

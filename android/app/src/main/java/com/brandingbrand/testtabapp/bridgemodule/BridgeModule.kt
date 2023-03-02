@@ -28,7 +28,6 @@ class BridgeModule(reactContext: ReactApplicationContext) : ReactContextBaseJava
 
     @ReactMethod
     fun dispatchExitEvent(data: ReadableMap) {
-        Log.d("EXIT RECEIVED", "derp")
         UiThreadUtil.runOnUiThread{
             val component = data.getString("component") ?: return@runOnUiThread
             val event = ExitEvent(component)
@@ -49,10 +48,13 @@ class BridgeModule(reactContext: ReactApplicationContext) : ReactContextBaseJava
     @ReactMethod
     fun dispatchShowPostEvent(data: ReadableMap) {
         UiThreadUtil.runOnUiThread{
-            val component = data.getString("component") ?: return@runOnUiThread
-            val postId = data.getString("postId") ?: return@runOnUiThread
-            val event = ShowPostEvent(postId, component)
-            bridgeDelegate?.didReceiveShowPostEvent(event)
+            val event = ShowPostEvent(data)
+            if (event.isValidEvent()) {
+                bridgeDelegate?.didReceiveShowPostEvent(event)
+            }
+            else {
+                Log.e("EngagementSDK", "Bridge did receive malformed showPost event.")
+            }
         }
     }
     override fun getName(): String {
