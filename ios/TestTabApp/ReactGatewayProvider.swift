@@ -17,7 +17,6 @@ protocol ReactGatewayProviderDelegate : NSObjectProtocol {
 class ReactGatewayProvider: NSObject, RCTBridgeDelegate, BridgeModuleProtocol {
     
     @objc static let defaultProvider = ReactGatewayProvider()
-    
     weak var delegate: ReactGatewayProviderDelegate?
     @objc weak var bridgeModule: BridgeModule? {
         didSet {
@@ -26,7 +25,6 @@ class ReactGatewayProvider: NSObject, RCTBridgeDelegate, BridgeModuleProtocol {
             }
         }
     }
-    
     @objc var eventEmitter: BridgeModuleEventEmitter?
     private var gateways: [ReactGateway] = []
     private var appId: String = ""
@@ -39,16 +37,13 @@ class ReactGatewayProvider: NSObject, RCTBridgeDelegate, BridgeModuleProtocol {
         guard let plistPath = Bundle.main.path(forResource: "Info", ofType: "plist") else {
             return
         }
-        
         let contents  = try? NSDictionary.init(contentsOf: URL.init(fileURLWithPath: plistPath), error: ())
-        
         if let appId = contents?.value(forKey: "BBEngagementAppID") as? String {
             self.appId = appId
         }
         else {
             print("EngagementSDK: Could not retreive application id from .plist")
         }
-        
     }
     
     //MARK: React Native host View Controller
@@ -59,13 +54,16 @@ class ReactGatewayProvider: NSObject, RCTBridgeDelegate, BridgeModuleProtocol {
             appenededDict.setValue(accountId, forKey: "accountId")
             props = appenededDict as Dictionary
         }
+            let appenededDict = NSMutableDictionary.init(dictionary: props)
+            appenededDict.setValue(appId, forKey: "appId")
+            props = appenededDict as Dictionary
         return ReactGateway.init(bridge: self.currentBridge(), moduleName: "ComponentOne", initialProps: props)
     }
     
     //TODO: Refactor bunlde location and get expected keys for values in engagement componenet
     func getPostViewController(showPostProps: ShowPostProps) -> ReactGateway {
         let props: Dictionary<AnyHashable, Any> = showPostProps.getJSObjectRepresenation()
-        return ReactGateway.init(bridge: self.currentBridge(), moduleName: "ComponentOne", initialProps: props)
+        return ReactGateway.init(bridge: self.currentBridge(), moduleName: "StoryComponent", initialProps: props)
     }
     
     //MARK: React bridge delegate

@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSString *json;
 @property(nonatomic, strong) NSDictionary *dynamicData;
 
-- (instancetype)initWithDataDictionary:(NSDictionary *)dataDictionary;
+- (instancetype)initWithComponentName:(NSString *)name data:(NSDictionary *)eventData;
 - (BOOL)areValidProps;
 - (NSDictionary *)getJSObjectRepresenation;
 

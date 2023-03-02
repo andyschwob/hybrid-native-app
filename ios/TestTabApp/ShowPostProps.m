@@ -9,15 +9,15 @@
 
 @implementation ShowPostProps
 
-- (instancetype)initWithDataDictionary:(NSDictionary *)dataDictionary
+- (instancetype)initWithComponentName:(NSString *)name data:(NSDictionary *)eventData
 {
     self = [self init];
     if (self) {
-        _postId = [dataDictionary objectForKey:@"postId"];
-        _json = [dataDictionary objectForKey:@"json"];
-        _name = [dataDictionary objectForKey:@"name"];
-        _dynamicData = [dataDictionary objectForKey:@"dynamicData"];
-        _invokingComponent = [dataDictionary objectForKey:@"component"];
+        _postId = [eventData objectForKey:@"postId"];
+        _json = [eventData objectForKey:@"json"];
+        _name = [eventData objectForKey:@"name"];
+        _dynamicData = [eventData objectForKey:@"dynamicData"];
+        _invokingComponent = name;
     }
     return self;
 }
@@ -41,7 +41,7 @@
         @"id": self.postId,
         @"name": self.name,
         @"json": self.json,
-        @"dynamicData": self.dynamicData,
+//        @"dynamicData": self.dynamicData,
         @"isLoading": @NO
     };
 }

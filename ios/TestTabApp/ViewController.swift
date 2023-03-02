@@ -8,7 +8,9 @@
 import UIKit
 
 class ViewController: UITabBarController, UITabBarControllerDelegate, ReactGatewayProviderDelegate {
-
+    
+    let reactGatewayProvider = ReactGatewayProvider.defaultProvider
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
@@ -26,7 +28,6 @@ class ViewController: UITabBarController, UITabBarControllerDelegate, ReactGatew
         tabTwo.tabBarItem = tabTwoBarItem
         self.viewControllers = [tabOne, tabTwo]
         
-        let reactGatewayProvider = ReactGatewayProvider.defaultProvider
         reactGatewayProvider.delegate = self
         
         let reactTab = reactGatewayProvider.getFeedViewController(accountId: nil, profileAttributes: nil)
@@ -35,15 +36,17 @@ class ViewController: UITabBarController, UITabBarControllerDelegate, ReactGatew
         reactTab.tabBarItem = reactBarItem
         self.viewControllers = [tabOne, tabTwo, reactTab]
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10) { [weak self] in
             print("invoked")
             let props = ["attributes" : ["foo" : "bar"]]
-            reactGatewayProvider.sendProfileAttributes(attributes: props)
+            self?.reactGatewayProvider.sendProfileAttributes(attributes: props)
         }
     }
     
     //MARK: React Gateway Delegate
     func didReceiveShowPostEvent(event: ShowPostEvent) {
+        let showPostVC = reactGatewayProvider.getPostViewController(showPostProps: event.props)
+        self.present(showPostVC, animated: true, completion: nil)
         print("Show post: \(event.props.postId)")
     }
     

@@ -13,7 +13,9 @@
 {
     self = [super init];
     if (self) {
-        _props = [[ShowPostProps alloc] initWithDataDictionary:data];
+        NSString *component = [data objectForKey:@"component"];
+        NSDictionary *props = [data objectForKey:@"data"];
+        _props = [[ShowPostProps alloc] initWithComponentName:component data:props];
     }
     return self;
 }

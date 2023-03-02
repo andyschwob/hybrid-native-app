@@ -720,10 +720,10 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@brandingbrand/fsengagementlite@12.0.0-alpha.3":
-  version "12.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fsengagementlite/-/fsengagementlite-12.0.0-alpha.3.tgz#41410b63917988b88ac7bb038fb68bb07f290c9c"
-  integrity sha512-avf3gMENrtcTXHn7KmYonWYol/ix0ryr6EwxFs8cvBgC1HE7J8Qh2fPntxq07QX/CRc0RYZaGjHyW1/mrinE6g==
+"@brandingbrand/fsengagementlite@12.0.0-alpha.4":
+  version "12.0.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fsengagementlite/-/fsengagementlite-12.0.0-alpha.4.tgz#4f3b21336fba97fa6055443b9634139d114f565c"
+  integrity sha512-eGfKKZW6S2q7X96h/u9AOeuBDcZKMZY/eabqZewC1AfPVn39fc1t5z36FZRg7sWyyAFJ3JybvXKgMJq5yHDnzw==
   dependencies:
     "@react-native-async-storage/async-storage" "^1.17.10"
     axios "~0.27.2"
