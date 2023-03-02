@@ -3,11 +3,19 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "yarn react-native start"
+    "start": "yarn react-native start",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@babel/core": "^7.20.12",
-    "@brandingbrand/fsengagement": "^11.81.0",
+    "@brandingbrand/fsengagementlite": "12.0.0-alpha.3",
+    "@react-native-async-storage/async-storage": "^1.17.11",
+    "patch-package": "^6.5.1",
+    "postinstall-postinstall": "^2.1.0",
+    "react-native-device-info": "^5.6.5",
+    "react-native-localize": "^1.4.3",
+    "react-native-svg": "^10.1.0",
+    "react-native-video": "^5.0.2",
     "react": "18.1.0",
     "react-native": "0.70.6"
   }
