@@ -27,10 +27,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
 
         val propsBundle = Bundle()
         propsBundle.putString("foo", "bar")
-        return ReactGatewayProvider.defaultProvider().newReactGatewayFragment(
-            "index",
-            "index.android.bundle",
-            propsBundle)
+        return ReactGatewayProvider.defaultProvider().newFeedFragment(null)
     }
 
     override fun getPageTitle(position: Int): CharSequence? {

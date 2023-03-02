@@ -27,9 +27,10 @@ class MainActivity : AppCompatActivity(), ReactGatewayDelegate {
         val tabs: TabLayout = binding.tabs
         tabs.setupWithViewPager(viewPager)
 
-        ReactGatewayProvider.defaultProvider().gatewayInterface = this
+        ReactGatewayProvider.defaultProvider().gatewayDelegate = this
     }
 
+    // Gateway Delegate overrides
     override fun didReceiveExitEvent(event: ExitEvent) {
         Log.d("EXIT RECEIVED", event.invokingComponent)
     }
