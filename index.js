@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useEffect } from "react"
 import EngagementLite, { EngagementCompGhost } from '@brandingbrand/fsengagementlite';
-import { AppRegistry, NativeEventEmitter, NativeModules, StyleSheet, View } from "react-native";
+import { AppRegistry, NativeEventEmitter, NativeModules, StyleSheet, Text, View } from "react-native";
 
 const { BridgeModule, BridgeModuleEventEmitter } = NativeModules;
 
@@ -33,37 +33,51 @@ const handleBackPress = () => {
   });
 };
 
-const { engagementService, EngagementComp } = EngagementLite({
-  appId: 'f547cb88-d59b-4edb-8ae9-f067c1cc5010', // Core example app (Hybrid Native App)
-  baseURL: 'https://api.brandingbrand.com/engagement-general/v1',
-  cacheTTL: 0,
-  handleDeepLink,
-  handleNavigateToPost,
-  handleBackPress
-});
 
 var styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
   },
-  hello: {
-    fontSize: 20,
+  errorText: {
+    fontSize: 16,
     textAlign: "center",
     margin: 10,
   },
 });
-
-const EngagementFeed = () => {
-
-  const eventEmitter = new NativeEventEmitter(BridgeModuleEventEmitter);
+let EngagementRenderer;
+const EngagementFeed = ({ appId }) => {
 
   const [loading, setLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState('');
   const [posts, setPosts] = useState([]);
   const [attributesArr, setAttributesArr] = useState([]);
 
+  if (appId === '') {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.errorText}>No App Id provided</Text>
+      </View>
+    );
+  }
+
+  const { engagementService, EngagementComp } = EngagementLite({
+    appId,
+    baseURL: 'https://api.brandingbrand.com/engagement-general/v1',
+    cacheTTL: 0,
+    handleDeepLink,
+    handleNavigateToPost,
+    handleBackPress
+  });
+  EngagementRenderer = EngagementComp;
+
+  const eventEmitter = new NativeEventEmitter(BridgeModuleEventEmitter);
+
   const fetchEngagementInbox = async () => {
-    await engagementService.getProfile(); // add user info?
+    const profile = await engagementService.getProfile(); // add user info?
+    if (!profile) {
+      throw 'invalid_id';
+    }
     const attributes = JSON.stringify(attributesArr);
   
     const inboxResponse = await engagementService.getInboxMessages({ attributes });
@@ -83,7 +97,10 @@ const EngagementFeed = () => {
           }))
         );
       })
-      .catch(() => {
+      .catch(e => {
+        if (e === 'invalid_id') {
+          setErrorMessage('App Id is invalid.')
+        }
         setLoading(false);
       });
   }, [setLoading, setPosts]);
@@ -114,13 +131,20 @@ const EngagementFeed = () => {
 
   const json = { private_type: 'feed', private_blocks: posts };
 
+  if (errorMessage) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.errorText}>{errorMessage}</Text>
+      </View>
+    )
+  }
   if (loading) {
     return <EngagementCompGhost />;
   }
 
   return (
     <View style={styles.container}>
-      <EngagementComp
+      <EngagementRenderer
         refreshControl={fetchDiscover}
         isLoading={false}
         json={json}
@@ -135,7 +159,7 @@ const EngagementStory = (props) => {
 
   return (
     <View style={styles.container}>
-      <EngagementComp
+      <EngagementRenderer
         isLoading={false}
         json={json}
         backButton={backButton}
