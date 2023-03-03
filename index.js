@@ -53,7 +53,7 @@ const EngagementFeed = ({ appId }) => {
   const [posts, setPosts] = useState([]);
   const [attributesArr, setAttributesArr] = useState([]);
 
-  if (appId === '') {
+  if (!appId || appId === '') {
     return (
       <View style={styles.container}>
         <Text style={styles.errorText}>No App Id provided</Text>
