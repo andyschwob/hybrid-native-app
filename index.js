@@ -4,16 +4,19 @@ import { AppRegistry, NativeEventEmitter, NativeModules, StyleSheet, Text, View 
 
 const { BridgeModule, BridgeModuleEventEmitter } = NativeModules;
 
-const handleDeepLink = link => {
+const handleDeepLink = url => {
   // Dispatch deep link to receiving application.
   BridgeModule.dispatchDeepLinkEvent({
     component: "ComponentOne",
-    url: link
+    data: {
+      url,
+      tag
+    }
   });
 };
 
 const handleNavigateToPost = data => {
-  const { postId, json, title, dynamicData, path } = data;
+  const { postId, json, title, dynamicData, tag } = data;
   //Dispatch show post event to receiving application.
   BridgeModule.dispatchShowPostEvent({
     component: "ComponentOne",
@@ -21,7 +24,8 @@ const handleNavigateToPost = data => {
       postId,
       json,
       name: title,
-      dynamicData
+      dynamicData,
+      tag
     }
   });
 };
