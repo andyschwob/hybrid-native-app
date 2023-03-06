@@ -4,7 +4,8 @@ import { AppRegistry, NativeEventEmitter, NativeModules, StyleSheet, Text, View 
 
 const { BridgeModule, BridgeModuleEventEmitter } = NativeModules;
 
-const handleDeepLink = url => {
+const handleDeepLink = data => {
+  const { url, tag } = data;
   // Dispatch deep link to receiving application.
   BridgeModule.dispatchDeepLinkEvent({
     component: "ComponentOne",
